@@ -1,0 +1,4 @@
+fault,estimate,se,ci_low,ci_high,p_value
+own_false_start,-0.1158,0.0137,-0.1446,-0.0871,0.0
+own_pass_fault,-0.0819,0.0306,-0.1459,-0.018,0.0148
+own_run_fault,-0.0012,0.0182,-0.0394,0.0369,0.9475

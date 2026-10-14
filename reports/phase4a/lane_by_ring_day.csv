@@ -1,0 +1,29 @@
+comp_day_id,runs,seconds,ci_low_s,ci_high_s,se_s,p_value,p_bh,p_tost,verdict,competition,ring,date
+S01-D1,410,-0.009,-0.034,0.016,0.0128,0.4796,0.7584,0.0007,no effect (equivalent),Hanácké škvarek,,2023-04-22
+S01-D2,481,-0.0258,-0.0552,0.0037,0.015,0.086,0.2189,0.0535,inconclusive,Hanácké škvarek,,2023-04-23
+S02-D1,1171,0.0213,0.0047,0.0378,0.0085,0.012,0.0478,0.0003,real but negligible,Eager´s Cup,1,2023-05-06
+S02-D2,1288,0.0032,-0.0096,0.016,0.0066,0.6256,0.8716,0.0,no effect (equivalent),Eager´s Cup,1,2023-05-07
+S03-D1,1254,-0.0197,-0.0326,-0.0067,0.0066,0.0029,0.0201,0.0,real but negligible,Eager´s Cup,2,2023-05-06
+S03-D2,1454,0.0078,-0.0126,0.0282,0.0104,0.4541,0.7584,0.0,no effect (equivalent),Eager´s Cup,2,2023-05-07
+S04-D1,1350,0.0013,-0.016,0.0187,0.0089,0.8817,0.9496,0.0,no effect (equivalent),Flyvaryors turnaj,,2023-05-20
+S04-D2,1496,-0.0089,-0.0242,0.0063,0.0078,0.2508,0.5557,0.0,no effect (equivalent),Flyvaryors turnaj,,2023-05-21
+S05-D1,1070,-0.0069,-0.0263,0.0126,0.0099,0.4876,0.7584,0.0,no effect (equivalent),MED's Trophy,,2023-06-10
+S05-D2,1142,0.0071,-0.031,0.0451,0.0194,0.716,0.8716,0.0135,no effect (equivalent),MED's Trophy,,2023-06-11
+S06-D1,713,-0.0054,-0.0303,0.0195,0.0127,0.6686,0.8716,0.0002,no effect (equivalent),BCCCZ mistrovství,,2023-06-24
+S06-D2,803,-0.0104,-0.0298,0.009,0.0099,0.2926,0.5853,0.0,no effect (equivalent),BCCCZ mistrovství,,2023-06-25
+S07-D1,1497,0.0135,-0.0018,0.0288,0.0078,0.0836,0.2189,0.0,no effect (equivalent),Crazy Cup,,2023-07-01
+S07-D2,1723,0.0155,0.0011,0.0299,0.0073,0.0348,0.1218,0.0,no effect (equivalent),Crazy Cup,,2023-07-02
+S08-D1,1106,0.0275,0.0065,0.0485,0.0107,0.0103,0.0478,0.0177,real but negligible,"Máchale, spadlo ti to!",,2023-07-15
+S08-D2,1290,0.0256,0.0133,0.0379,0.0063,0.0,0.0007,0.0001,real but negligible,"Máchale, spadlo ti to!",,2023-07-16
+S09-D1,947,0.0005,-0.0116,0.0125,0.0061,0.9409,0.9736,0.0,no effect (equivalent),Mistrovství České republiky,,2023-09-02
+S09-D2,1104,0.0213,0.0092,0.0335,0.0062,0.0006,0.0054,0.0,real but negligible,Mistrovství České republiky,,2023-09-03
+S10-D1,1103,0.0148,-0.0004,0.03,0.0077,0.0561,0.1745,0.0,no effect (equivalent),Křupky na břehu,,2023-09-16
+S10-D2,1233,-0.0116,-0.037,0.0138,0.013,0.3716,0.6936,0.0015,no effect (equivalent),Křupky na břehu,,2023-09-17
+S11-D1,1286,0.0037,-0.0098,0.0172,0.0069,0.5903,0.87,0.0,no effect (equivalent),Budějckej xtreme,1,2023-10-14
+S11-D2,1498,0.0186,0.0044,0.0327,0.0072,0.01,0.0478,0.0,real but negligible,Budějckej xtreme,1,2023-10-15
+S12-D1,1350,0.0065,-0.0048,0.0177,0.0057,0.258,0.5557,0.0,no effect (equivalent),Budějckej xtreme,2,2023-10-14
+S12-D2,1549,-0.0016,-0.015,0.0118,0.0069,0.8161,0.914,0.0,no effect (equivalent),Budějckej xtreme,2,2023-10-15
+S13-D1,968,-0.0008,-0.0452,0.0437,0.0227,0.9736,0.9736,0.0149,no effect (equivalent),EFC,1,2023-07-29
+S14-D1,749,0.0124,-0.0537,0.0785,0.0337,0.7133,0.8716,0.1325,inconclusive,EFC,2,2023-07-29
+S15-D1,1422,0.0022,-0.0129,0.0174,0.0077,0.7745,0.9036,0.0,no effect (equivalent),EFC,1,2023-07-30
+S16-D1,1320,0.0321,0.0176,0.0466,0.0074,0.0,0.0004,0.0077,real but negligible,EFC,2,2023-07-30

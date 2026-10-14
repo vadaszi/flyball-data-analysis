@@ -1,0 +1,17 @@
+model,term,pct,pct_low,pct_high,seconds_at_median,p_value,group
+mixed,C(position)[T.2],0.8978,0.49,1.3073,0.0384,0.0,WRFT
+mixed,C(position)[T.3],0.6125,0.1738,1.0531,0.0262,0.0062,WRFT
+mixed,C(position)[T.4],0.8685,0.3801,1.3593,0.0372,0.0005,WRFT
+mixed,hurdle_step,0.336,0.2239,0.4482,0.0144,0.0,WRFT
+dog_fixed_effects,C(position)[T.2],0.8986,-0.1061,1.9134,0.0385,0.0798,WRFT
+dog_fixed_effects,C(position)[T.3],0.6112,-0.5098,1.7449,0.0262,0.2864,WRFT
+dog_fixed_effects,C(position)[T.4],0.8653,-0.6078,2.3602,0.037,0.2511,WRFT
+dog_fixed_effects,hurdle_step,0.3459,-0.0422,0.7355,0.0148,0.0808,WRFT
+mixed,C(position)[T.2],0.8029,0.6371,0.969,0.0343,0.0,Field
+mixed,C(position)[T.3],0.7806,0.6077,0.9537,0.0333,0.0,Field
+mixed,C(position)[T.4],1.0048,0.8055,1.2044,0.0429,0.0,Field
+mixed,hurdle_step,0.4606,0.4148,0.5065,0.0197,0.0,Field
+dog_fixed_effects,C(position)[T.2],0.7813,0.4245,1.1394,0.0334,0.0,Field
+dog_fixed_effects,C(position)[T.3],0.7494,0.3414,1.1591,0.032,0.0003,Field
+dog_fixed_effects,C(position)[T.4],0.9404,0.4168,1.4668,0.0402,0.0004,Field
+dog_fixed_effects,hurdle_step,0.4831,0.3474,0.6189,0.0206,0.0,Field

@@ -1,0 +1,10 @@
+group,heats,win_clean,win_after_fault,loss_fault,loss_uncoded_rerun,loss_slower,loss_breakout_like,loss_not_finished,losses,avoidable_losses,share_losses_with_fault,share_losses_avoidable
+Field (non-WRFT),7338,2880,467,2187,248,1262,97,197,3991,950,0.6101,0.238
+WildRunners Maximini,228,79,11,85,10,38,2,3,138,31,0.6884,0.2246
+WildRunners Nightfall,153,65,17,40,5,26,0,0,71,21,0.6338,0.2958
+WildRunners Wonders,44,7,4,17,3,8,0,5,33,7,0.6061,0.2121
+WildRunners XXL,115,25,12,45,6,23,3,1,78,5,0.6538,0.0641
+WildRunners Zephyr,213,69,17,72,5,42,6,2,127,38,0.6063,0.2992
+WildRunners dreamers,174,64,9,49,2,44,4,2,101,19,0.505,0.1881
+WildRunners hopefuls,187,67,8,68,3,39,1,1,112,34,0.6339,0.3036
+WRFT (all teams),1114,376,78,376,34,220,16,14,660,155,0.6212,0.2348

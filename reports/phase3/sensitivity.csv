@@ -1,0 +1,6 @@
+check,baseline,variant,delta,note
+WRFT win rate: drop WRFT-vs-WRFT heats,0.4077,0.3905,-0.0172,
+WRFT win rate: drop ties,0.4077,0.4075,-0.0002,
+WRFT win rate: paired heats only,0.4077,0.4045,-0.0032,
+dog median run: keep per-dog outliers (median |change| over dogs),0.0,0.0,0.0,max 0.030 s
+dog median pass: keep held passes > 3 s (median |change| over dogs),0.0,0.0,0.0,max 4.160 s

@@ -1,0 +1,29 @@
+comp_day_id,sheet_id,source,sheet,title,competition,ring,venue,country,date,weekday,date_from_title,date_overridden,day_index,n_rows,n_wrft_rows,divisions,first_heat,last_heat
+S01-D1,S01,CZ,Hanácké škvarek,Hanácké škvarek (Heroltice) 2023. április 22-23.,Hanácké škvarek,,Heroltice,CZ,2023-04-22,Saturday,2023-04-22,False,1,109,73,"1,2",10:11,17:17
+S01-D2,S01,CZ,Hanácké škvarek,Hanácké škvarek (Heroltice) 2023. április 22-23.,Hanácké škvarek,,Heroltice,CZ,2023-04-23,Sunday,2023-04-23,False,2,126,88,"1,2",09:06,13:15
+S02-D1,S02,CZ,Eager´s Cup 1,Eager´s Cup 1. ring (Žamberk) 2023. május 6-7.,Eager´s Cup,1,Žamberk,CZ,2023-05-06,Saturday,2023-05-06,False,1,312,64,"1,2,4,8",09:34,18:28
+S02-D2,S02,CZ,Eager´s Cup 1,Eager´s Cup 1. ring (Žamberk) 2023. május 6-7.,Eager´s Cup,1,Žamberk,CZ,2023-05-07,Sunday,2023-05-07,False,2,329,56,"1,2,4,8",08:12,18:07
+S03-D1,S03,CZ,Eager´s Cup 2,Eager´s Cup 2. ring (Žamberk) 2023. május 6-7.,Eager´s Cup,2,Žamberk,CZ,2023-05-06,Saturday,2023-05-06,False,1,329,13,"3,5,6,7",09:24,18:08
+S03-D2,S03,CZ,Eager´s Cup 2,Eager´s Cup 2. ring (Žamberk) 2023. május 6-7.,Eager´s Cup,2,Žamberk,CZ,2023-05-07,Sunday,2023-05-07,False,2,376,8,"3,5,6,7",08:13,18:19
+S04-D1,S04,CZ,Flyvaryors turnaj,Flyvaryors turnaj (Blšany) 2023. május 20-21.,Flyvaryors turnaj,,Blšany,CZ,2023-05-20,Saturday,2023-05-20,False,1,354,37,"1,2,3,4,5",09:08,17:31
+S04-D2,S04,CZ,Flyvaryors turnaj,Flyvaryors turnaj (Blšany) 2023. május 20-21.,Flyvaryors turnaj,,Blšany,CZ,2023-05-21,Sunday,2023-05-21,False,2,386,44,"1,2,3,4,5",08:10,16:42
+S05-D1,S05,CZ,MED's Trophy,MED's Trophy (Pláně) 2023. június 10-11.,MED's Trophy,,Pláně,CZ,2023-06-10,Saturday,2023-06-10,False,1,284,0,"1,2,3,4",09:07,16:56
+S05-D2,S05,CZ,MED's Trophy,MED's Trophy (Pláně) 2023. június 10-11.,MED's Trophy,,Pláně,CZ,2023-06-11,Sunday,2023-06-11,False,2,295,0,"1,2,3,4",08:08,16:06
+S06-D1,S06,CZ,BCCCZ mistrovství,BCCCZ mistrovství (Prostějov) 2023. június 24-25.,BCCCZ mistrovství,,Prostějov,CZ,2023-06-24,Saturday,2023-06-24,False,1,184,85,"1,2,3",10:07,16:06
+S06-D2,S06,CZ,BCCCZ mistrovství,BCCCZ mistrovství (Prostějov) 2023. június 24-25.,BCCCZ mistrovství,,Prostějov,CZ,2023-06-25,Sunday,2023-06-25,False,2,205,99,"1,2,3",09:10,15:19
+S07-D1,S07,CZ,Crazy Cup,Crazy Cup (Nové Město pod Smrkem) 2023. július 1-2.,Crazy Cup,,Nové Město pod Smrkem,CZ,2023-07-01,Saturday,2023-07-01,False,1,386,72,"1,2,3,4,5,6",09:37,18:55
+S07-D2,S07,CZ,Crazy Cup,Crazy Cup (Nové Město pod Smrkem) 2023. július 1-2.,Crazy Cup,,Nové Město pod Smrkem,CZ,2023-07-02,Sunday,2023-07-02,False,2,438,77,"1,2,3,4,5,6",08:08,18:29
+S08-D1,S08,CZ,"Máchale, spadlo ti to!","Máchale, spadlo ti to! (Louňovice) 2023. július 15-16.","Máchale, spadlo ti to!",,Louňovice,CZ,2023-07-15,Saturday,2023-07-15,False,1,314,36,"1,2,3,4,5",08:57,18:38
+S08-D2,S08,CZ,"Máchale, spadlo ti to!","Máchale, spadlo ti to! (Louňovice) 2023. július 15-16.","Máchale, spadlo ti to!",,Louňovice,CZ,2023-07-16,Sunday,2023-07-16,False,2,354,39,"1,2,3,4,5",08:04,16:56
+S09-D1,S09,CZ,Mistrovství České republiky,Mistrovství České republiky (Blšany) 2023. szeptember 3-4.,Mistrovství České republiky,,Blšany,CZ,2023-09-02,Saturday,2023-09-03,True,1,241,60,"1,2,3,4",09:46,16:17
+S09-D2,S09,CZ,Mistrovství České republiky,Mistrovství České republiky (Blšany) 2023. szeptember 3-4.,Mistrovství České republiky,,Blšany,CZ,2023-09-03,Sunday,2023-09-04,True,2,280,53,"1,2",08:35,15:53
+S10-D1,S10,CZ,Křupky na břehu,Křupky na břehu (Litomyšl) 2023. szeptember 16-17.,Křupky na břehu,,Litomyšl,CZ,2023-09-16,Saturday,2023-09-16,False,1,290,48,"1,2,3,4",09:29,17:21
+S10-D2,S10,CZ,Křupky na břehu,Křupky na břehu (Litomyšl) 2023. szeptember 16-17.,Křupky na břehu,,Litomyšl,CZ,2023-09-17,Sunday,2023-09-17,False,2,317,45,"1,2,3,4",08:19,16:22
+S11-D1,S11,CZ,Budějckej xtreme 1,Budějckej xtreme 1. ring (Vodňany) 2023. október 14-15.,Budějckej xtreme,1,Vodňany,CZ,2023-10-14,Saturday,2023-10-14,False,1,338,0,"1,3,6,7",08:04,16:09
+S11-D2,S11,CZ,Budějckej xtreme 1,Budějckej xtreme 1. ring (Vodňany) 2023. október 14-15.,Budějckej xtreme,1,Vodňany,CZ,2023-10-15,Sunday,2023-10-15,False,2,390,0,"1,3,6,7",08:04,18:12
+S12-D1,S12,CZ,Budějckej xtreme 2,Budějckej xtreme 2. ring (Vodňany) 2023. október 14-15.,Budějckej xtreme,2,Vodňany,CZ,2023-10-14,Saturday,2023-10-14,False,1,356,36,"2,4,5,8",07:47,16:04
+S12-D2,S12,CZ,Budějckej xtreme 2,Budějckej xtreme 2. ring (Vodňany) 2023. október 14-15.,Budějckej xtreme,2,Vodňany,CZ,2023-10-15,Sunday,2023-10-15,False,2,402,36,"2,4,5,8",08:26,17:59
+S13-D1,S13,EFC,EFC_1 ring_1,EFC - Ring 1 (Tápiószentmárton) 2023. július 29.,EFC,1,Tápiószentmárton,HU,2023-07-29,Saturday,2023-07-29,False,1,268,15,"10,11,13",12:26,18:25
+S14-D1,S14,EFC,EFC_1 ring_2,EFC - Ring 2 (Tápiószentmárton) 2023. július 29.,EFC,2,Tápiószentmárton,HU,2023-07-29,Saturday,2023-07-29,False,1,197,23,"9,12",12:21,18:03
+S15-D1,S15,EFC,EFC_2 ring_1,EFC - Ring 1 (Tápiószentmárton) 2023. július 30.,EFC,1,Tápiószentmárton,HU,2023-07-30,Sunday,2023-07-30,False,1,370,14,"1,2,3,4",08:04,17:45
+S16-D1,S16,EFC,EFC_2 ring_2,EFC - Ring 2 (Tápiószentmárton) 2023. július 30.,EFC,2,Tápiószentmárton,HU,2023-07-30,Sunday,2023-07-30,False,1,341,7,"5,6,7,8",08:05,17:19

@@ -1,0 +1,6 @@
+sample,model,outcome,factor,contrast,estimate,ci_low,ci_high,pct,p_value
+WRFT,mixed (dog + ring-day random),run time,temperature,temperature +10 °C (below 20 °C),-0.0761,-0.1434,-0.0076,-1.7777,0.0295
+WRFT,mixed (dog + ring-day random),run time,temperature,temperature +10 °C (above 20 °C),0.0101,-0.068,0.0898,0.2367,0.8011
+WRFT,mixed (dog + ring-day random),run time,humidity,humidity +20 pp,0.0368,0.0085,0.0653,0.8601,0.0107
+WRFT,mixed (dog + ring-day random),run time,wind,wind +3 m/s,0.0294,0.0032,0.0559,0.6879,0.0279
+WRFT,mixed (dog + ring-day random),run time,rain,rain in the last 3 h,-0.0149,-0.0297,-0.0,-0.348,0.0496

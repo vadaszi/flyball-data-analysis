@@ -1,0 +1,4 @@
+check,count,out_of,share
+lane switches between consecutive heats of the same race,4,6211,0.0006
+race-teams in the red lane,1166,2332,0.5
+paired heats where the first-listed team is blue,4226,4226,1.0

@@ -1,0 +1,23 @@
+sample,outcome,unit,rows_used,races,lane_summary,red,blue,blue_minus_red,ci_low,ci_high,p_value,margin,p_tost,p_holm,verdict
+field,"run time (log, per run)",s,32744,1172,median,4.25,4.28,0.0066,0.0028,0.0104,0.0007,0.05,0.0,0.008,real but negligible
+field,clean heat time,s,7810,1156,median,17.42,17.47,0.0307,-0.0299,0.0914,0.321,0.2,0.0,1.0,no effect (equivalent)
+field,start time,s,7483,1171,median,0.1,0.1,-0.0005,-0.0052,0.0042,0.8416,0.02,0.0,1.0,no effect (equivalent)
+field,pass time,s,22063,1172,median,0.15,0.16,0.0105,0.0021,0.0188,0.0143,0.02,0.0127,0.143,no effect (equivalent)
+field,"pass time, held passes (> 1 s) left out",s,21520,1172,median,0.15,0.15,0.0033,-0.0018,0.0084,0.2074,0.02,0.0,1.0,no effect (equivalent)
+field,tight-pass (ok) share,share,24450,1172,mean,0.34,0.3428,-0.0073,-0.0204,0.0059,0.2783,0.02,0.0284,1.0,no effect (equivalent)
+field,clean-heat rate,share,8464,1172,mean,0.5616,0.5641,-0.0005,-0.0217,0.0206,0.9619,0.02,0.0354,1.0,no effect (equivalent)
+field,false-start rate (heat),share,8464,1172,mean,0.115,0.1102,-0.0026,-0.0158,0.0105,0.6943,0.02,0.0048,1.0,no effect (equivalent)
+field,early-pass rate (heat),share,8464,1172,mean,0.2225,0.2296,-0.0031,-0.021,0.0148,0.7334,0.02,0.0323,1.0,no effect (equivalent)
+field,run-fault rate (heat),share,8464,1172,mean,0.0574,0.061,0.0074,-0.0028,0.0175,0.1544,0.02,0.0073,1.0,no effect (equivalent)
+field,heat win rate,share,8388,1159,mean,0.4547,0.4406,-0.0106,-0.0402,0.019,0.4824,0.02,0.267,1.0,inconclusive
+WRFT,"run time (log, per run)",s,4338,287,median,4.26,4.29,0.0062,-0.0061,0.0185,0.3258,0.05,0.0,1.0,no effect (equivalent)
+WRFT,clean heat time,s,1042,284,median,17.14,17.47,-0.0135,-0.1379,0.111,0.832,0.2,0.0017,1.0,no effect (equivalent)
+WRFT,start time,s,937,280,median,0.1,0.11,0.0047,-0.0105,0.0198,0.547,0.02,0.0238,1.0,no effect (equivalent)
+WRFT,pass time,s,2892,287,median,0.19,0.21,0.0444,0.0134,0.0753,0.005,0.02,0.9386,0.0545,inconclusive
+WRFT,"pass time, held passes (> 1 s) left out",s,2753,287,median,0.18,0.19,0.0071,-0.0088,0.023,0.3846,0.02,0.0553,1.0,inconclusive
+WRFT,tight-pass (ok) share,share,3257,287,mean,0.2915,0.264,-0.0207,-0.0552,0.0138,0.2402,0.02,0.5158,1.0,inconclusive
+WRFT,clean-heat rate,share,1116,287,mean,0.5293,0.5588,0.0388,-0.0224,0.1,0.2143,0.02,0.7262,1.0,inconclusive
+WRFT,false-start rate (heat),share,1116,287,mean,0.151,0.1646,0.0039,-0.0405,0.0484,0.8628,0.02,0.2393,1.0,inconclusive
+WRFT,early-pass rate (heat),share,1116,287,mean,0.2362,0.2441,0.003,-0.0486,0.0546,0.9085,0.02,0.2596,1.0,inconclusive
+WRFT,run-fault rate (heat),share,1116,287,mean,0.0746,0.0506,-0.0274,-0.0589,0.0041,0.0884,0.02,0.677,0.8839,inconclusive
+WRFT,heat win rate,share,1105,285,mean,0.4152,0.3938,-0.0346,-0.1068,0.0375,0.3469,0.02,0.6544,1.0,inconclusive

@@ -1,0 +1,52 @@
+handler_id,dog,breed_raw,birth_date,chip,ulna_cm_raw,jump_height_cm,sex,neutered,category,breed_group,ulna_cm,ulna_corrected,jump_height_fci
+TM800418,Dexter,Kooikerhondje,2010-02-14,93900005238999,14.05,25.0,male,True,neutered male,Other,14.05,False,25.0
+NP950613,Jasper,Border Collie,2011-03-28,93900007189034,16.56,30.0,male,True,neutered male,Border Collie,16.56,False,30.0
+UF830429,Angie,Border,2014-02-06,93900003827629,15.22,27.5,female,True,neutered female,Border Collie,15.22,False,27.5
+ZE801127,Alex,Border Collie,2014-04-22,93900003598960,17.95,32.5,male,True,neutered male,Border Collie,17.95,False,32.5
+DP910919,Ashley,border collie,2015-01-26,93900009738344,18.3,32.5,female,True,neutered female,Border Collie,18.3,False,32.5
+OJ941014,Bella,American Staffordshire Terrier,2015-02-27,93900009320601,14.7,25.0,female,True,neutered female,Other,14.7,False,25.0
+HO800728,Gordon,Jack Russell Terrier,2015-04-12,93900001569304,9.67,15.0,male,True,neutered male,Other,9.67,False,15.0
+UR870607,Negro,Keverék,2015-04-14,93900002110777,15.77,27.5,male,True,neutered male,Mix,15.77,False,27.5
+RK871018,Fibo,Magyar Vizsla,2015-05-21,93900001757525,17.99,32.5,male,True,neutered male,Other,17.99,False,32.5
+PO831026,Agnes,Border Collie,2015-09-24,93900007138387,18.02,32.5,female,True,neutered female,Border Collie,18.02,False,32.5
+DM850705,Speedy,Keverék,2015-11-07,93900001547455,1.491,25.0,male,True,neutered male,Mix,14.91,True,25.0
+LO900912,Apollo,Border,2015-12-01,93900002501294,17.2,30.0,male,True,neutered male,Border Collie,17.2,False,30.0
+TV860229,Riley,Mix,2016-02-27,93900009815888,15.26,27.5,female,True,neutered female,Mix,15.26,False,27.5
+WS810829,Jessie,Border Collie,2016-04-30,93900008979908,17.99,32.5,female,True,neutered female,Border Collie,17.99,False,32.5
+MB801205,Ted,border collie,2016-05-02,93900007209752,16.52,30.0,male,True,neutered male,Border Collie,16.52,False,30.0
+OK870605,Gerry,Australian Kelpie,2016-09-03,93900007728423,14.04,25.0,male,True,neutered male,Other,14.04,False,25.0
+UB870201,Henry,Parson Russell terrier,2017-04-15,93900008474491,1.209,20.0,male,True,neutered male,Other,12.09,True,20.0
+KL920415,Bailey,Border Collie,2017-05-04,93900004198045,18.16,32.5,female,True,neutered female,Border Collie,18.16,False,32.5
+BV810323,Enola,Border Collie,2017-05-31,93900002731726,18.06,32.5,female,True,neutered female,Border Collie,18.06,False,32.5
+JV990222,Punk,Small schnauzer,2017-07-04,93900007218892,10.02,15.0,female,True,neutered female,Other,10.02,False,17.5
+AT991109,Sara,Border,2017-08-25,93900003495780,15.84,27.5,female,True,neutered female,Border Collie,15.84,False,27.5
+UZ940717,Pax,Sheltie,2017-09-08,93900004293075,14.3,25.0,male,True,neutered male,Other,14.3,False,25.0
+MT970826,Rex,Mix,2017-11-17,93900004371167,16.01,27.5,male,False,intact male,Mix,16.01,False,27.5
+SO990728,Dusty,Parson Russell terrier,2017-12-21,93900005627226,13.03,22.5,female,True,neutered female,Other,13.03,False,22.5
+UO920408,Fleur,Border Collie,2018-01-04,93900001974600,17.81,32.5,male,True,neutered male,Border Collie,17.81,False,32.5
+IN920805,Bruno,BorderCollie,2018-03-08,93900002928155,175.5,32.5,male,True,neutered male,Border Collie,17.55,True,32.5
+IS961124,Alfie,Australian Shepperd,2018-03-09,93900009309522,16.56,30.0,female,True,neutered female,Other,16.56,False,30.0
+UO880828,Hector,Border Collie,2018-08-02,93900003589833,18.0,32.5,male,False,intact male,Border Collie,18.0,False,32.5
+TU820403,Maggie,BorderCollie,2018-09-02,93900005172450,16.54,30.0,female,True,neutered female,Border Collie,16.54,False,30.0
+KL970722,Them,Mix,2018-10-18,93900003871143,14.8,25.0,male,True,neutered male,Mix,14.8,False,25.0
+EH831207,Rocky,Belgian shepherd - Malinois,2018-12-22,93900003818036,18.29,32.5,male,True,neutered male,Other,18.29,False,32.5
+LZ800202,Dixie,Border Collie,2018-12-22,93900002523549,14.36,25.0,male,True,neutered male,Border Collie,14.36,False,25.0
+OA821108,Brix,border collie,2019-01-19,93900003669802,17.68,32.5,male,True,neutered male,Border Collie,17.68,False,32.5
+HM980701,Milo,Border Collie,2019-06-01,93900009646655,17.3,30.0,male,True,neutered male,Border Collie,17.3,False,30.0
+EC940409,Tyna,BorderCollie,2019-06-15,93900007664925,15.36,27.5,female,True,neutered female,Border Collie,15.36,False,27.5
+NZ800507,Abby,Border Collie,2019-07-16,93900008694414,15.46,27.5,female,True,neutered female,Border Collie,15.46,False,27.5
+EH800220,Easy,Patterdale terrier,2019-11-13,93900006680519,11.71,20.0,male,True,neutered male,Other,11.71,False,20.0
+DU050516,Falco,Border Collie,2020-04-20,93900009884426,152.8,27.5,female,True,neutered female,Border Collie,15.28,True,27.5
+GB900808,Sunny,Belgian shepherd - Malinois,2020-09-10,93900009650506,18.0,32.5,female,True,neutered female,Other,18.0,False,32.5
+RF840515,Nina,Border Collie,2020-09-20,93900002949462,15.38,27.5,female,True,neutered female,Border Collie,15.38,False,27.5
+TC041225,Kesha,Border,2020-11-16,93900005669853,13.6,22.5,male,False,intact male,Border Collie,13.6,False,22.5
+LF971218,Mason,Mix,2020-11-29,93900002956276,15.23,27.5,male,True,neutered male,Mix,15.23,False,27.5
+GE030417,Moon,Border Collie,2021-01-04,93900006876951,17.35,30.0,female,False,intact female,Border Collie,17.35,False,30.0
+DD800226,Sirius,Border,2021-01-04,93900005539134,17.74,32.5,male,True,neutered male,Border Collie,17.74,False,32.5
+LM070408,Scotty,Mudi,2021-01-31,93900008830504,16.84,30.0,male,False,intact male,Other,16.84,False,30.0
+RN891016,Cookies,Australian Kelpie,2021-04-09,93900008401355,15.12,27.5,male,False,intact male,Other,15.12,False,27.5
+LP030829,Bree,Belgian shepherd - Malinois,2021-06-11,93900003826751,16.73,30.0,female,True,neutered female,Other,16.73,False,30.0
+VK910426,Kent,Mix,2021-07-10,93900001206699,15.28,27.5,male,False,intact male,Mix,15.28,False,27.5
+MJ930217,Brooke,Border Collie,2021-10-20,93900005854271,17.08,30.0,male,False,intact male,Border Collie,17.08,False,30.0
+NJ890324,Bonnie,Whippet,2022-03-08,93900008748969,15.71,27.5,female,False,intact female,Other,15.71,False,27.5
+UH881130,Hank,Keverék,2022-05-02,93900008222471,16.28,27.5,male,False,intact male,Mix,16.28,False,30.0

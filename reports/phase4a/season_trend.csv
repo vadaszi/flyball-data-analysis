@@ -1,0 +1,3 @@
+sample,runs,dogs,pct_per_30_days,ci_low,ci_high,seconds_per_30_days,p_value
+field,32777,903,-0.1861,-0.2108,-0.1615,-0.0079,0.0
+WRFT,4340,50,-0.291,-0.3602,-0.2217,-0.0125,0.0

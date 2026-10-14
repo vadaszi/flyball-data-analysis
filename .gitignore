@@ -1,0 +1,13 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+
+# Windows download metadata
+*:Zone.Identifier
+
+# Phase 6 build intermediates (deck HTML with machine-specific file:// paths)
+reports/phase6/

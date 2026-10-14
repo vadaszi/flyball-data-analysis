@@ -1,0 +1,767 @@
+# WRFT 2023 – a prezentáció és a weboldal teljes magyar szövege.
+#
+# Minden szám helyőrző: {kulcs} vagy {kulcs|módosító|...}. A kulcsok a
+# reports/phase5/key_numbers.json-ban vagy a flyball.report.numbers.derived()-ben vannak,
+# a {dog.<név>.<oszlop>} alak a kutya-adatlapokból olvas. Számjegyet közvetlenül
+# nem írunk a szövegbe (a teszt ezt ellenőrzi; kivétel: évszámok, „95%”, sorszámok).
+# Módosítók: sign (előjel), pp (százalékpont), ci (95%-os tartomány zárójelben),
+# d0–d3 (tizedesek), abs, nosign, nounit (mértékegység nélkül, hogy ragozható legyen:
+# „{x|pp|nounit} százalékponttal”, „{y|nounit} mp-nél”).
+#
+# Nyelvi elvek: hétköznapi, magyaros mondatok; szakszó csak a függelékben, ott is
+# magyarázattal. Egységes szóhasználat:
+#   hibátlan futam (clean heat) · tiszta idő (a négy futás összege) · korai rajt · korai váltás ·
+#   futási hiba · fejlesztési lehetőség (lever) · rangsor (impact ledger) · plusz győzelem ·
+#   a divízió többi csapata (peers) · mezőny (minden más csapat) · felvezető (handler).
+#
+# Egy angol változathoz elég ezt a fájlt lecserélni (text_en.toml); a diagramok
+# feliratai a flyball/plots/deck.py-ban vannak.
+
+[meta]
+title = "Wild Runners Flyball Team – a 2023-as szezon elemzése"
+short_title = "WRFT 2023 – szezonelemzés"
+subtitle = "Mitől nyerünk futamot, hol veszítünk, és mit tegyünk 2024-ben?"
+audience = "Az edzőnek és a felvezetőknek"
+date = "2026. október"
+footer = "WRFT 2023 · szezonelemzés"
+ci_note = "Zárójelben: a becslés 95%-os bizonytalansági tartománya"
+pdf_name = "WRFT_2023_elemzes.pdf"
+notes_name = "WRFT_2023_eloadoi_jegyzet.pdf"
+
+[legend]
+ci = "A számok utáni zárójeles tartomány a becslés 95%-os bizonytalansági tartománya: a valódi érték nagy valószínűséggel ebbe esik."
+wins = "Plusz győzelem: ennyivel több futamot nyerne a WRFT egy szezonban más klubok csapatai ellen."
+
+# ============================================================================================
+# FŐ RÉSZ – a 10–12 perces előadás
+# ============================================================================================
+
+[[slide]]
+id = "cover"
+part = "main"
+layout = "cover"
+time = "0:15"
+title = "Gyorsak vagyunk. A futamokat a hibák miatt veszítjük el."
+lead = "A Wild Runners Flyball Team 2023-as szezonja: {events} verseny, {wrft_competition_days} versenynap, {wrft_teams} csapat, {wrft_dogs} kutya, {wrft_heats_with_result} lefutott futam."
+stats = [
+  ["{wrft_median_run_s}", "a WRFT-kutyák jellemző futási ideje", "a többi csapatnál: {field_median_run_s}"],
+  ["{wrft_win_rate}", "ennyi futamot nyer a WRFT", "a többi csapat: {field_win_rate}"],
+  ["{wrft_false_start_heats}", "a WRFT-futamok ennyiében van korai rajt", "a többi csapatnál: {field_false_start_heats}"],
+]
+notes = """
+Köszöntés. A cél egy mondatban: a 2023-as eredményekből olyan döntéseket hozni, amelyekkel 2024-ben több futamot nyerünk.
+Mit tekintünk jó eredménynek? A megnyert futamot. Minden javaslatnál azt nézzük, hány futamgyőzelmet hozna.
+"""
+
+[[slide]]
+id = "summary"
+part = "main"
+layout = "summary"
+time = "1:00"
+kicker = "Összefoglaló"
+title = "Kutyáink ugyanolyan gyorsak, mint a többieké – a futamokat a hibák miatt veszítjük el. Három fejlesztési lehetőség egyenként kb. {impact_all_fault_gaps|nosign}–{impact_day2|nosign} plusz győzelmet ér egy szezonban."
+lead = "A kutyák jellemző (medián) futási ideje: WRFT {wrft_median_run_s}, a többi csapat {field_median_run_s}. A megnyert futamok aránya: WRFT {wrft_win_rate}, a többi csapat {field_win_rate}. A különbséget a hibák okozzák."
+notes = """
+Kezdjük a lényeggel: a sebesség megvan, a hibák a gond.
+A három lehetőség részben átfedi egymást (egy megbízhatóbb rajtoló kutya például egyben kevesebb korai rajtot is jelent), ezért a hatásuk nem adódik össze teljesen.
+Ha mindhármat maradéktalanul megvalósítanánk, az összesen kb. {levers_sum_pp|pp} lenne. Reális cél 2024-re kb. {planning_target_pp|pp|nosign} javulás a győzelmi arányban – ez becslés, nem a modell eredménye.
+"""
+
+[[slide.cards]]
+value = "{impact_all_reorders}"
+unit = "plusz győzelem szezononként"
+name = "Futási sorrend"
+text = "Ugyanaz a négy kutya, jobb sorrendben – négy csapatnál. Már a következő versenyen bevezethető, semmibe sem kerül."
+tag = "azonnal"
+
+[[slide.cards]]
+value = "{impact_day2}"
+unit = "plusz győzelem szezononként"
+name = "A szombati nap"
+text = "Ha az első versenynapon is annyi hibátlan futam lenne, mint a másodikon. Hogy miért rosszabb a szombat, még ki kell deríteni."
+tag = "kivizsgálandó"
+
+[[slide.cards]]
+value = "{impact_all_fault_gaps}"
+unit = "plusz győzelem szezononként"
+name = "Visszatérő hibák"
+text = "Csapatonként egy-két jellemző hiba (rajt, váltás vagy futás) célzott gyakorlása, amíg a divízió többi csapatának szintjére nem javul."
+tag = "edzés"
+
+[[slide.answers]]
+q = "1. kérdés · A pálya színe"
+a = "Gyakorlatilag nem számít ({lane_field_s|sign} futásonként). Nem kell vele foglalkozni."
+
+[[slide.answers]]
+q = "2. kérdés · Kire vált a kutya"
+a = "A váltótárs neme és ivarállapota nem befolyásolja mérhetően a teljesítményt. Egy érdekesség: ivaros kanokra gyakrabban tartják vissza a váltást."
+
+[[slide.answers]]
+q = "3. kérdés · Versenyenként"
+a = "{wrft_competition_days} versenynapból {below_peer_days} napon maradtunk el a divízió többi csapatától – mindig a hibák, soha nem a sebesség miatt."
+
+[[slide.answers]]
+q = "Időjárás"
+a = "Csak a {temp_hinge_c} feletti meleg lassít: minden további {temp_step_c} futásonként {heat_run_s|sign}. A páratartalom, a szél és az eső nem számít."
+
+[[slide.answers]]
+q = "Ideális összeállítás"
+a = "Legjobb négyes: {a_team}, várhatóan {a_team_expected_s} futamonként. Biztos alapemberek: Enola, Alfie, Maggie."
+
+[[slide]]
+id = "season"
+part = "main"
+layout = "chart"
+time = "0:45"
+kicker = "A szezon egy pillantásra"
+title = "{wrft_competition_days} versenynap, {wrft_heats_with_result} futam, {temp_min_c|d0} és {temp_max_c|d0} között"
+figure = "season_calendar"
+caption = "Minden kis négyzet egy WRFT-versenynap. A szín azt mutatja, hány hibátlan futamunk volt a többi csapat átlagához ({field_clean_heat_rate|d0}) képest; alatta a megnyert futamok aránya. Lent: átlaghőmérséklet a verseny idején (Open-Meteo)."
+bullets = [
+  "Hibátlan futamok aránya: WRFT {wrft_clean_heat_rate}, a többi csapat {field_clean_heat_rate}.",
+  "Korai rajt a futamok {wrft_false_start_heats}-ában (a többi csapatnál {field_false_start_heats}) – ebben van a legnagyobb különbség.",
+  "A ▲ jelű {below_peer_days} napon kevesebb futamot nyertünk, mint a divízió többi csapata.",
+]
+notes = """
+Háttér: {events} verseny, {wrft_teams} WRFT-csapat, {wrft_dogs} kutya. Minden futamhoz hozzárendeltük az akkori időjárást.
+Már itt látszik egy minta: a szombati négyzetek többnyire narancsosabbak (kevesebb hibátlan futam), a vasárnapiak zöldebbek. Erre később visszatérünk.
+"""
+
+[[slide]]
+id = "what_wins"
+part = "main"
+layout = "chart"
+time = "0:45"
+kicker = "Mitől nyerünk futamot?"
+title = "Hibátlan futammal {win_clean_vs_fault|d0} eséllyel nyerünk, ha az ellenfél hibázik; ha mi hibázunk, csak {win_fault_vs_clean|d0} eséllyel"
+figure = "what_wins"
+caption = "Bal: minden csapat minden futama, aszerint, hogy ki hibázott. Jobb: azok a futamok, ahol egyik csapat sem hibázott, a két csapat szokásos tiszta idejének különbsége szerint. Árnyékolva a 95%-os bizonytalansági tartomány."
+bullets = [
+  "Jó eredménynek a megnyert futamot tekintjük.",
+  "Az, hogy ki hibázott, kb. tizenötször jobban megmagyarázza a futam kimenetelét, mint a csapatok szokásos sebessége.",
+  "Egy hiba javítása (újrafutás) kb. {rerun_cost_false_start_s|d1}–{rerun_cost_pass_fault_s|d1} időbe kerül – többe, mint szinte bármelyik két csapat sebességkülönbsége.",
+]
+notes = """
+Ezzel definiáljuk a jó eredményt: a megnyert futamot. Ehhez két dolog kell: hibátlan futam, és gyorsabb tiszta idő, mint a divízió többi csapatáé.
+A bal oldali ábra szerint a hiba szinte mindent eldönt. A jobb oldali szerint ha senki sem hibázik, a gyorsabb nyer – sebességben viszont a WRFT már most versenyképes.
+(A modell magyarázó ereje: hibák {heat_model_r2_faults}, sebesség {heat_model_r2_speed}, McFadden-féle pszeudo-R².)
+"""
+
+[[slide]]
+id = "heat_strip"
+part = "main"
+layout = "chart"
+time = "0:30"
+kicker = "Egy valódi futam"
+title = "Hanácké, a szezon első versenye: a Hopefuls több mint két másodperccel gyorsabb volt, mégis kikapott egy korai váltás miatt"
+figure = "heat_strip"
+caption = "A Hopefuls és a FOFR DOG futama idővonalon, a zöld lámpától mérve. Szürke rés: rajt, illetve váltás; narancs vonal: Moon korai váltása, amelyet nem futottak újra."
+bullets = [
+  "A WRFT {wrft_losses} elvesztett futamának {wrft_losses_with_fault_share}-ában saját hiba is volt.",
+  "{wrft_avoidable_losses} vereség ({wrft_avoidable_share}) elkerülhető lett volna: hiba miatt veszett el, pedig aznapi szokásos tiszta idejével a csapat nyert volna.",
+  "Ez a dia az egész elemzés röviden: a sebesség megvan, a futamokat a hibák viszik el.",
+]
+notes = """
+Egy konkrét futam, hogy kézzelfogható legyen. A Hopefuls sorrendje: Enola, Maggie, Tyna, Moon. Moon korán vált, a hibát nem futják újra, így a gyorsabb csapat veszít.
+Egy szezonban {wrft_avoidable_losses} ilyen elkerülhető vereségünk volt.
+"""
+
+[[slide]]
+id = "ledger"
+part = "main"
+layout = "chart"
+time = "0:45"
+kicker = "A lehetőségek rangsora"
+title = "Minden javaslatot ugyanazzal mérünk: hány futammal nyernénk többet egy szezonban?"
+figure = "impact_ledger"
+caption = "Plusz győzelem szezononként a más klubok elleni {wrft_heats_vs_clubs} futamban (ezek {wrft_win_rate_vs_clubs}-át nyertük meg); a vonal a 95%-os bizonytalansági tartomány. A felső szürke sáv (egyáltalán nincs saját hiba) csak viszonyítási pont, nem cél."
+bullets = [
+  "Három nagyjából egyforma súlyú lehetőség: futási sorrend {impact_all_reorders}, szombati nap {impact_day2}, visszatérő hibák {impact_all_fault_gaps}.",
+  "A pálya színe és a váltótárs neme nem számít – ezekkel nem kell foglalkozni.",
+  "A meleg csak néhány futamot ér ({impact_heat}), mert az ellenfeleket is lassítja: ez inkább a kutyák jólléte miatt fontos.",
+]
+notes = """
+Hogyan számoltunk, egy mondatban: a futamgyőzelmet előrejelző modellben úgy módosítjuk a bemeneteket, ahogyan a javaslat tenné, és megszámoljuk, hány futamot nyerne így a WRFT.
+Ezek „mi lenne, ha” becslések: a lehetőségek sorba állítására jók, de nem ígéretek. A lehetőségek részben átfedik egymást.
+"""
+
+[[slide]]
+id = "order"
+part = "main"
+layout = "lineup_cards"
+time = "1:00"
+kicker = "Első lehetőség · Futási sorrend"
+title = "Négy csapatnál már a sorrend átrendezése kb. {impact_all_reorders|nosign} plusz győzelmet hoz – ingyen, a következő versenytől"
+strip = "lineup_reorder|all"
+data = "team_lineups"
+bullets = [
+  "A nyereség nagy része azon múlik, ki rajtol: Cookies {cookies_starts} rajtjából {cookies_false_start_rate} volt korai.",
+  "A gyors rajtolók egyben a legmegbízhatóbbak is: a leggyorsabban rajtoló kutyáknál {start_fault_rate_0.05_0.08}, a lassabbaknál {start_fault_rate_0.14_0.18} a korai rajt aránya.",
+  "Maggie eddig csak {dog.maggie.starts}-szer rajtolt (hiba nélkül); a kipróbált megoldás Enola ({dog.enola.starts} rajt).",
+]
+notes = """
+A modell minden csapatra kiszámolta az összes lehetséges sorrendet a kutyák adatai alapján (futás, rajt, váltás, hibaarányok).
+Hopefuls: ha Cookies helyett Maggie rajtol, futamonként kb. {hopefuls_order_gain_s|nounit} másodperccel gyorsabbak. Zephyr: {zephyr_order_gain_s}, XXL: {xxl_order_gain_s}.
+A Dreamers, a Nightfall és a Wonders sorrendje már most is (majdnem) a legjobb.
+Fontos: a javaslat nem azt ígéri, hogy egy adott futam hibátlan lesz – azt nem lehet előre tudni –, hanem hogy egy szezon alatt kevesebb lesz a korai rajt, mert megbízhatóbb kutya kezd.
+"""
+
+[[slide]]
+id = "saturday"
+part = "main"
+layout = "chart_side"
+time = "1:00"
+kicker = "Második lehetőség · A szombati nap"
+title = "Ugyanazok a csapatok vasárnap {day2_clean_heat_wrft|pp|nounit|nosign|d0} százalékponttal több hibátlan futamot futnak – ha a szombat is ilyen lenne, az kb. {impact_day2|nosign} plusz győzelem"
+figure = "day_slope"
+strip = "day2"
+bullets = [
+  "Ugyanaz a csapat ugyanazon a versenyen, az időjárás és az akadálymagasság hatását kiszűrve: a második napon a hibátlan futamok aránya {day2_clean_heat_wrft|pp|ci} (WRFT); a mezőnyben {day2_clean_heat_field|pp}.",
+  "Rajtonként {day2_false_start_wrft|pp} korai rajt; a korai rajtos futamok aránya {day2_fs_heats|pp}, a korai váltásosaké {day2_ep_heats|pp}.",
+  "A sebesség nem változik ({day2_run_time_field_s|sign} futásonként): nem a kutyák fáradnak vagy frissülnek, hanem a rutin más.",
+  "Az ok egyelőre ismeretlen: izgalom, új pálya, utazás, bemelegítés vagy a szombati versenyrend.",
+]
+notes = """
+Nem sebességről van szó, hanem rutinról vagy izgalomról. Az okát nem ismerjük, ezért ez kísérlet: kérdezzük meg a felvezetőket, mi más szombatonként (érkezés, bemelegítés, ringbejárás, gyakorlási lehetőség, a boxban töltött idő).
+Javaslat: a következő kétnapos versenyen szombaton is a vasárnapi rutin szerint készüljünk, és mindkét napot jegyezzük fel.
+"""
+
+[[slide]]
+id = "faults"
+part = "main"
+layout = "chart_side"
+time = "1:15"
+kicker = "Harmadik lehetőség · Visszatérő hibák"
+title = "Minden csapatnak van egy jellemző, edzéssel javítható hibája: az XXL-nek a rajt, a Zephyrnek a futás, a Hopefulsnak a váltás"
+figure = "dog_quadrant"
+strip = "gap_club|all"
+data = "fault_habits"
+bullets = [
+  "Ne erőltessük a még szorosabb váltást: a WRFT jellemző váltási ideje {wrft_median_pass_s} (a többi csapaté {field_median_pass_s}), ez már a biztonságos tartományban van ({pass_window_lo_s|nounit}–{pass_window_hi_s}).",
+]
+notes = """
+Nevezzük néven a kutyákat, de edzési célként, nem hibáztatásként.
+Rajt: Scotty {dog.scotty.false_start_rate} ({dog.scotty.starts} rajt), Rex {rex_false_start_rate}. Futás: Ted {ted_run_fault_rate} ({dog.ted.runs_attempted} futás). Váltás: Moon {moon_early_pass_rate}, Bree {bree_early_pass_rate}.
+Hibatípusonként, az egész klubra: a korai rajtok {impact_false_start_gaps}, a korai váltások {impact_early_pass_gaps}, a futási hibák {impact_run_fault_gaps} plusz győzelmet érnek.
+"""
+
+[[slide]]
+id = "lineup"
+part = "main"
+layout = "ateam"
+time = "0:45"
+kicker = "Ideális összeállítás"
+title = "A legjobb csapat alapja Enola, Alfie és Maggie, negyediknek Pax illik melléjük – kis „magasságadó” kutya nem éri meg"
+strip = "lineup_swap|hopefuls"
+data = "a_team"
+bullets = [
+  "{lineup_orders_searched} lehetséges sorrendet számoltunk végig ({pool_dogs} kutyából, akiknek legalább {pool_min_runs} értékelhető futásuk volt).",
+  "Legjobb négyes: {a_team} – várhatóan {a_team_expected_s} futamonként, hiba nélkül {a_team_no_fault_s}; a hibátlan futam esélye {a_team_p_clean}.",
+  "{stability_resamples} véletlenszerű újraszámolásból Enola mindig ({stability_enola|d0}) bekerül a legjobb négyesbe, Alfie az esetek {stability_alfie|d0}-ában, Pax {stability_pax|d0}-ában, Maggie {stability_maggie|d0}-ában.",
+  "Kis kutya csak az alacsonyabb akadályért: amit a társak nyernek, kevesebb, mint amennyit a kis kutya lassabb futása elvesz (Easy {easy_height_dog_net_s|sign}, Gordon {gordon_height_dog_net_s|sign} futamonként).",
+]
+notes = """
+Az alap stabil, a negyedik hely az adatoktól függ.
+Nyitott kérdés: versenyezhet-e Pax 2024-ben? Júliusban futott utoljára. Ha nem, Tyna vagy Alex lép a helyére, alig rosszabb idővel.
+Utólagos ellenőrzés: a tavaszi–nyári adatokból számolt modell jól sorba állította a szeptemberi–októberi valódi futamokat (Spearman-féle rangkorreláció: {backtest_spearman}).
+"""
+
+[[slide]]
+id = "q1q2"
+part = "main"
+layout = "two_charts"
+time = "1:00"
+kicker = "Az edző kérdései · 1. és 2."
+title = "Sem a pálya színe, sem a váltótárs neme vagy ivarállapota nem befolyásolja a teljesítményt"
+figure = "lane_slopes"
+figure2 = "partner_forest"
+caption = "1. kérdés: a WRFT-kutyák jellemző futási ideje a piros és a kék pályán (mindkettőn legalább tíz értékelhető futás)."
+caption2 = "2. kérdés: váltás ivartalan szukára, ivaros kanra, ivaros szukára – az ivartalan kanhoz képest, a kor és a csapat hatását kiszűrve; a vonal a 95%-os bizonytalansági tartomány."
+bullets = [
+  "Ugyanaz a kutya a kék pályán futásonként mindössze {lane_field_s|nounit} másodperccel lassabb (az egész mezőnyben); a WRFT-kutyáknál a különbség {lane_wrft_s|sign|ci}.",
+  "Kimutattuk, hogy a különbség kisebb {lane_margin_s|d2|nounit} mp-nél, vagyis gyakorlatilag nincs; a {lane_ring_days} ring és nap közül a legnagyobb eltérés is csak {lane_ring_day_max_s}.",
+]
+bullets2 = [
+  "{wrft_passes} WRFT-váltást vizsgáltunk; egyik kategóriánál sincs valódi (nem véletlennek tulajdonítható) különbség. Ivaros szuka csak {intact_female_dogs} van, ivaros kan {intact_male_dogs}.",
+  "Érdekesség: ivaros kanra gyakrabban tartják vissza a váltást (több mint {held_pass_s|d0|nounit} másodpercig): {held_pass_intact_male|pp|ci}.",
+]
+notes = """
+Mindkét kérdésre a válasz: nem.
+A pálya színénél többet is mondhatunk annál, hogy „nem találtunk különbséget”: kimutattuk, hogy ha van is különbség, az kisebb annál, ami már számítana.
+A váltótársnál a pontos megfogalmazás: „nincs jele hatásnak”, mert az ivaros csoportok kicsik. Az ivaros kutyák ráadásul fiatalabbak; ezt a modell figyelembe veszi.
+Kérdés a felvezetőknek: szándékosan tartják-e vissza a váltást a fiatal ivaros kanokra?
+"""
+
+[[slide]]
+id = "weather"
+part = "main"
+layout = "chart_side"
+time = "0:45"
+kicker = "Időjárás"
+title = "Csak a {temp_hinge_c} feletti meleg lassít: minden további {temp_step_c} futásonként {heat_run_s|nounit} másodperccel – és ugyanígy lassítja az ellenfeleket is"
+figure = "heat_curve"
+bullets = [
+  "Egy {temp_step_c}-kal melegebb napon ez futamonként kb. {heat_per_heat_s} ({heat_run_pct|sign} futásonként).",
+  "Az időjárás és az évszak együtt a versenynapok közötti sebességkülönbségek {weather_day_r2|as_pct}-át magyarázza.",
+  "Teendők {hot_day_c} felett: árnyék, hűtés, víz, rövidebb bemelegítés, kutyánként kevesebb futam.",
+]
+notes = """
+Az edző sejtése részben igaz: a meleg valóban lassít, de csak {temp_hinge_c} felett. A páratartalom, a szél és az eső hatása elhanyagolható vagy kimutathatóan nulla.
+Mivel az ellenfeleket is lassítja, az eredményeken legfeljebb {impact_heat} győzelmet változtat – ezért elsősorban a kutyák jólléte miatt fontos.
+Fáradás: minden korábbi futás aznap {fatigue_run_s|nounit} másodperccel lassítja a következőt.
+"""
+
+[[slide.verdict]]
+factor = "Hőmérséklet"
+verdict = "igazolva, {temp_hinge_c} felett"
+effect = "{heat_run_s|sign|ci} minden további {temp_step_c}"
+status = "yes"
+
+[[slide.verdict]]
+factor = "Páratartalom"
+verdict = "van hatása, de elhanyagolható"
+effect = "{humidity_run_s|sign} minden további {humidity_step_pp|pp|nounit|nosign|d0} százalékpont"
+status = "no"
+
+[[slide.verdict]]
+factor = "Szél"
+verdict = "nincs hatása"
+effect = "{wind_run_s|sign} minden további {wind_step_ms}"
+status = "no"
+
+[[slide.verdict]]
+factor = "Eső"
+verdict = "nincs hatása"
+effect = "{rain_run_s|sign} eső után"
+status = "no"
+
+[[slide]]
+id = "competitions"
+part = "main"
+layout = "chart"
+time = "0:45"
+kicker = "Az edző kérdései · 3. versenyenként"
+title = "A rossz napok hibás napok voltak: {wrft_competition_days} versenynapból {below_peer_days} napon maradtunk le, de soha nem a sebesség miatt"
+figure = "competition_panels"
+caption = "Felül: a WRFT győzelmi aránya (a vonal a 95%-os bizonytalansági tartomány; narancs karika: a divízió többi csapata alatt). Középen: a hibátlan futamok aránya. Alul: a kutyák sebessége a saját átlagos napjukhoz képest (negatív = gyorsabb)."
+bullets = [
+  "A WRFT tiszta ideje egyetlen napon sem maradt el a divízió többi csapatáétól.",
+  "Ugyanazok a kutyák a saját átlagukhoz képest napról napra {speed_index_field_min_pct|d1} és {speed_index_field_max_pct|sign|d1} között futottak; a meleg napokon voltak a leglassabbak.",
+  "A szezon során a kutyák gyorsultak: havonta {season_trend_wrft_pct|sign|ci}.",
+]
+notes = """
+A teljes versenyenkénti táblázat a függelékben és a weboldalon található (ott versenynapot is lehet választani).
+Javaslat: minden verseny után a napi összesítőt nézzük meg (hibátlan futamok, hibák típus szerint, elkerülhető vereségek), ne csak az időket.
+Az elkerülhető vereségek aránya ({avoidable_peak_share}) éppen a leggyorsabb napunkon, Budějckej vasárnapján volt a legmagasabb.
+"""
+
+[[slide]]
+id = "actions"
+part = "main"
+layout = "actions"
+time = "1:00"
+kicker = "Teendők"
+title = "Kilenc lépés, mindegyikhez egy mérhető cél – kezdjük a futási sorrenddel a következő versenyen"
+notes = """
+Minden sorhoz tartozik egy mérőszám és a 2023-as kiinduló érték, így jövőre ellenőrizhető, mi vált be.
+Zárásként a nyitott kérdések az edzőnek: versenyezhet-e Pax, mi más szombatonként, tud-e Maggie rajtolni, szándékos-e a visszatartott váltás, volt-e fedett pályás verseny.
+"""
+
+[[slide.actions]]
+what = "A javasolt sorrendek bevezetése (Hopefuls, Zephyr, XXL, Maximini)"
+who = "edző"
+when = "következő verseny"
+kpi = "korai rajtos futamok aránya"
+target = "{wrft_false_start_heats} → legfeljebb {field_false_start_heats}"
+tag = "most"
+
+[[slide.actions]]
+what = "Csak megbízható rajtoló kutya kezdjen; Maggie rajtolását edzésen ki kell próbálni"
+who = "edző, felvezetők"
+when = "most"
+kpi = "a rajtoló kutya korai rajtjainak aránya"
+target = "Cookies {cookies_false_start_rate|d0} → a mezőny szintje"
+tag = "most"
+
+[[slide.actions]]
+what = "Szombaton is a vasárnapi rutin szerint készülni; mindkét napot feljegyezni"
+who = "edző"
+when = "következő kétnapos verseny"
+kpi = "különbség az első és a második nap hibátlan futamai között"
+target = "{day2_clean_heat_wrft|pp|nounit|nosign|d0} százalékpont → minimális"
+tag = "következő verseny"
+
+[[slide.actions]]
+what = "Rajtgyakorlás: Scotty, Negro, Rex"
+who = "felvezetők"
+when = "versenyszünet"
+kpi = "az XXL lemaradása korai rajtban a divízióhoz képest"
+target = "{xxl_false_start_gap|pp|nounit|nosign|d0} százalékpont → nulla"
+tag = "versenyszünet"
+
+[[slide.actions]]
+what = "A futási hibák gyakorlása (fordulás a doboznál, labdafelvétel): Ted, mielőtt újra versenyez"
+who = "felvezető"
+when = "versenyszünet"
+kpi = "Ted futási hibáinak aránya"
+target = "{ted_run_fault_rate|d0} → a mezőny szintje"
+tag = "versenyszünet"
+
+[[slide.actions]]
+what = "Váltásgyakorlás a biztonságos tartományra ({pass_window_lo_s|nounit}–{pass_window_hi_s}): Moon, Bree, Maggie"
+who = "felvezetők"
+when = "versenyszünet"
+kpi = "korai váltások aránya"
+target = "Moon {moon_early_pass_rate|d0}, Bree {bree_early_pass_rate|d0} → a mezőny szintje"
+tag = "versenyszünet"
+
+[[slide.actions]]
+what = "Teendők meleg napokra, {hot_day_c} felett"
+who = "edző"
+when = "nyári versenyek"
+kpi = "a kutyák jólléte; sebesség a meleg napokon"
+target = "–"
+tag = "nyár"
+
+[[slide.actions]]
+what = "Döntés Paxról; a legjobb csapatot Enola, Alfie és Maggie köré építeni"
+who = "edző"
+when = "a 2024-es szezon előtt"
+kpi = "a legjobb csapat tiszta ideje"
+target = "a négy futás együtt kb. {a_team_runs_s|d1}"
+tag = "versenyszünet"
+
+[[slide.actions]]
+what = "Az adatgyűjtés folytatása: ugyanazok a táblázatok, plusz a szombati rutin, a visszatartott váltások és hogy fedett vagy szabadtéri-e a pálya"
+who = "edző"
+when = "minden verseny"
+kpi = "naprakész kutya-adatlapok"
+target = "–"
+tag = "folyamatos"
+
+[[slide]]
+id = "methods"
+part = "main"
+layout = "text"
+time = "0:30"
+kicker = "Módszer és korlátok"
+title = "Mennyire bízhatunk az eredményekben?"
+bullets = [
+  "Adatok: {sheet_days} versenynap {team_rows} csapateredménye, ellenőrizve és lépésenként dokumentálva (rejtett színkódok kiolvasása, elcsúszott sorok javítása, hibás adatok kiszűrése).",
+  "Elemzés: minden kutyát önmagához hasonlítottunk (ugyanaz a kutya, ugyanazon a napon), így a kutyák közötti különbségek nem torzítanak. A sok párhuzamos vizsgálat miatt szigorúbb küszöböt alkalmaztunk, a „nincs hatás” állításokat pedig külön teszttel igazoltuk.",
+  "Időjárás: Open-Meteo (kb. tíz kilométeres rácsra számolt adatok), nem helyszíni mérés; az esőt csak úgy vettük figyelembe, hogy esett-e.",
+  "A „mi lenne, ha” becslések a múltbeli adatokból készültek: a lehetőségek sorrendjét jól mutatják, de pontos eredményt nem ígérnek.",
+  "A WRFT-ről kevés az adat ({wrft_teams} csapat, {wrft_dogs} kutya), ezért ahol lehetett, az egész mezőnyön ({field_dogs} kutya) számoltunk, és a WRFT-n ellenőriztünk.",
+  "Egy-egy futamról nem lehet előre megmondani, lesz-e benne hiba: ez nagyrészt a véletlenen múlik, a modell itt alig jobb a pénzfeldobásnál. A kutyák közötti különbség viszont valódi, és egy szezon alatt összeadódik (Cookies rajtjainak {cookies_false_start_rate|d0}-a korai, Enoláénak {dog.enola.false_start_rate|d0}-a). Ezért a javaslatok nem egy-egy futamot ígérnek, hanem kevesebb hibát egy egész szezonra.",
+]
+notes = """
+Csak röviden. A részletek a függelékben, a kód és a lépésenkénti napló a projektben található.
+Ha megkérdezik, mennyire pontos a hibák előrejelzése: egy futamra AUC {backtest_auc_clean}, ahol a pénzfeldobás értéke egy fél – tehát egy adott futamot gyakorlatilag nem lehet előre megmondani.
+Hasonlat: cinkelt érme. A következő dobást nem tudjuk megjósolni, de száz dobás alatt meglátszik, merre húz. A kutyák hibaarányai ilyen „cinkelt érmék”: Cookies rajtjainak {cookies_false_start_rate|d0}-a korai, Enoláénak {dog.enola.false_start_rate|d0}-a, és ez a különbség jóval nagyobb a véletlen ingadozásnál.
+Ősszel a csapatok kevesebbet hibáztak: a tavaszi–nyári adatokból számolt modell {backtest_p_clean_predicted|d0} hibátlan futamot várt, a valóság {backtest_p_clean_observed|d0} lett. A hibaarányok tehát inkább pesszimisták.
+"""
+
+# ============================================================================================
+# FÜGGELÉK – kérdésekhez
+# ============================================================================================
+
+[[slide]]
+id = "appendix"
+part = "appendix"
+layout = "divider"
+title = "Függelék"
+lead = "Részletes táblázatok és a módszertani háttér, kérdések esetére."
+notes = ""
+
+[[slide]]
+id = "a_data"
+part = "appendix"
+layout = "text"
+kicker = "Függelék · Adatok és ellenőrzés"
+title = "Három Excel-fájlból ellenőrzött, bármikor újra előállítható táblázatok"
+bullets = [
+  "Források: a kutyák alapadatai, valamint a cseh (FLYBALLCZ) és az EFC versenyeredmények – {events} verseny, {sheet_days} versenynap, {team_rows} csapateredmény (a {practice_rows} gyakorló futamot kihagytuk).",
+  "Rejtett jelölések: a pálya színét a csapatnév betűszíne, egyes hibákat a cella piros betűszíne jelzi – mindkettőt kiolvastuk.",
+  "{rows_realigned} sor egy cellával el volt csúszva (egy „vběhl” bejegyzés után a váltás cellájában); ez okozta az összes negatív futási időt, kijavítottuk.",
+  "A cseh bajnokság valójában szeptember második–harmadik napján volt (a forrásban egy nappal későbbi dátum szerepel); ezt az interneten ellenőriztük.",
+  "Az „ok” jelű váltás nem pontosan nulla, hanem egy nagyon kicsi, nyolc századmásodperc alatti érték; ezért ahol lehetett, mediánnal számoltunk.",
+  "Kiszűrt adatok (mindegyiknél megnéztük, változik-e az eredmény nélkülük): gyakorló futamok, nulla összidő, „0” nevű kutya, irreálisan gyors vagy lassú futás, egy-egy kutya kiugró értékei, túl hosszú váltás.",
+  "Ellenőrzés: automatikus tesztek, kézi szúrópróba az Excel-fájlokkal, és minden lépés futtatható programja ugyanazt az eredményt adja újra.",
+]
+notes = "A lépések teljes listája az ANALYSIS_LOG.md első lépésében."
+
+[[slide]]
+id = "a_model"
+part = "appendix"
+layout = "two_charts"
+kicker = "Függelék · Mitől nyerünk futamot – a modell"
+title = "A futam kimenetelét a hibák döntik el; a sebesség csak hibátlan futamok között számít"
+figure = "heat_model"
+figure2 = "heat_outcomes"
+caption = "Logisztikus regresszió: mennyivel változik a győzelem esélye (esélyhányados, 95%-os tartomány). Az egynél kisebb érték rontja, az egynél nagyobb javítja az esélyt; a saját hiba a töredékére csökkenti."
+caption2 = "A futamok kimenetele csapatonként és a mezőnyben: győzelem, saját hiba miatti vereség, hibátlan, de lassabb futás miatti vereség."
+notes = "Magyarázó erő (McFadden-féle pszeudo-R²): hibák {heat_model_r2_faults}, sebesség {heat_model_r2_speed}."
+
+[[slide]]
+id = "a_ledger"
+part = "appendix"
+layout = "table"
+kicker = "Függelék · A rangsor számítása"
+title = "Minden lehetőség ugyanabban a mértékegységben: plusz győzelem szezononként"
+data = "ledger_table"
+bullets = [
+  "Alap: a más klubok elleni {wrft_heats_vs_clubs} futam ({wrft_win_rate_vs_clubs} győzelem); a bizonytalansági tartományt {ledger_draws} szimulációval becsültük.",
+  "Az összeállításoknál a mostani és a javasolt felállást hasonlítottuk össze, a csapat legutóbbi versenyének ellenfeleivel szemben.",
+  "A lehetőségek átfedik egymást, ezért nem adhatók össze; a kutyacserék nyeresége optimista becslés.",
+]
+notes = "Összesen {ledger_levers} lehetőséget számoltunk végig (reports/phase5/impact_ledger.csv)."
+
+[[slide]]
+id = "a_teams"
+part = "appendix"
+layout = "chart"
+kicker = "Függelék · Csapatok a divízió többi csapatához képest"
+title = "Minden csapatnak más a gyenge pontja: az XXL a rajtban, a Zephyr a futásban, a Hopefuls a váltásban marad le"
+figure = "team_gaps"
+caption = "Minden WRFT-csapat eltérése azoktól a csapatoktól, amelyekkel ugyanazon a versenyen, ugyanabban a divízióban futott; a vonal a 95%-os bizonytalansági tartomány. Narancs: valódi lemaradás, zöld: valódi előny (nem a véletlen műve)."
+notes = "XXL korai rajt {xxl_false_start_gap|pp|ci}; Zephyr futási hiba {zephyr_run_fault_gap|pp|ci}; Hopefuls korai váltás {hopefuls_early_pass_gap|pp|ci}."
+
+[[slide]]
+id = "a_team_table"
+part = "appendix"
+layout = "table"
+kicker = "Függelék · Csapatok"
+title = "A hét WRFT-csapat 2023-ban"
+data = "team_table"
+notes = "Forrás: reports/phase3/team_summary.csv."
+
+[[slide]]
+id = "a_dogs1"
+part = "appendix"
+layout = "table"
+kicker = "Függelék · Kutyák (1/2)"
+title = "A kutyák sebesség szerint (akiknek legalább {pool_min_runs} értékelhető futásuk volt)"
+data = "dog_table_1"
+notes = "Korrigált arány: kevés próbálkozásnál a kutya hibaarányát a csoportátlag felé igazítjuk, hogy ne a véletlen döntsön (empirikus Bayes-módszer)."
+
+[[slide]]
+id = "a_dogs2"
+part = "appendix"
+layout = "table"
+kicker = "Függelék · Kutyák (2/2)"
+title = "A kutyák sebesség szerint – folytatás"
+data = "dog_table_2"
+notes = "A teljes táblázat (minden kutya) a weboldalon szűrhető, és CSV-fájlként letölthető."
+
+[[slide]]
+id = "a_window"
+part = "appendix"
+layout = "chart"
+kicker = "Függelék · Rajt és váltás"
+title = "A gyors rajt egyben biztonságos is; a túl szoros váltás viszont kockázatos"
+figure = "pass_window"
+caption = "Az összes kutya (legalább húsz próbálkozással), jellemző idejük szerint csoportosítva; a vonal a 95%-os bizonytalansági tartomány. Zöld sáv: itt a legkisebb a várható időveszteség (idő + a hibák miatti újrafutás)."
+bullets = [
+  "Korai váltás: a legszorosabban váltó kutyáknál {pass_fault_rate_under_0.08}, a középmezőnyben {pass_fault_rate_0.25_0.35}, a legóvatosabbaknál {pass_fault_rate_over_0.35}.",
+]
+notes = "A várható időveszteség {pass_window_lo_s|nounit} és {pass_window_hi_s} között szinte ugyanakkora: ebben a tartományban mindegy, mikor vált a kutya."
+
+[[slide]]
+id = "a_q1"
+part = "appendix"
+layout = "chart_side"
+kicker = "Függelék · 1. kérdés részletesen"
+title = "Egyik versenynapon és ringben sem volt számottevő különbség a két pálya között"
+figure = "lane_ring_days"
+bullets = [
+  "Szürke sáv: ±{lane_margin_s|d2} – ennél kisebb különbség a gyakorlatban nem számít.",
+  "Az egész mezőnyben: {lane_field_s|sign|ci} futásonként – kimutatható, de elhanyagolható.",
+  "A WRFT-kutyáknál: {lane_wrft_s|sign|ci} – gyakorlatilag nulla.",
+  "A pályát mérkőzésenként sorsolják (az elsőként szereplő csapat mindig a kéken fut), a csapatok tehát nem választanak.",
+  "A rajt, a váltás és a hibák aránya sem különbözik a két pályán.",
+]
+notes = "Vegyes modell: a futási idő (logaritmusa) a pálya, a sorrendbeli hely, az akadálymagasság és a divízió függvényében, kutyánként és versenynaponként eltérő alapszinttel; ellenőrzésként egy kutya×nap fix hatásos változat."
+
+[[slide]]
+id = "a_q2"
+part = "appendix"
+layout = "table"
+kicker = "Függelék · 2. kérdés részletesen"
+title = "Váltások a beérkező kutya neme és ivarállapota szerint – a nyers különbségek mögött a kutyák kora áll"
+data = "partner_table"
+bullets = [
+  "Az ivaros kutyák jóval fiatalabbak, ezért a modell a kort és a csapatot is figyelembe veszi.",
+  "Egyik mutatónál sincs valódi különbség (váltási idő, „ok” váltások aránya, korai váltás, a kifutó kutya futási ideje).",
+  "Érdekesség: ivaros kanra gyakrabban tartják vissza a váltást (több mint {held_pass_s|d0|nounit} másodpercig): {held_pass_intact_male|pp|ci}.",
+]
+notes = "Ivaros szuka csak {intact_female_dogs} van, ezért az ő becslésük nagyon bizonytalan."
+
+[[slide]]
+id = "a_q3a"
+part = "appendix"
+layout = "table"
+kicker = "Függelék · 3. kérdés: versenynapok (1/2)"
+title = "Versenynapok tavasztól nyár közepéig"
+data = "days_table_1"
+notes = "Forrás: reports/phase4a/competition_days.csv; időjárás: data/processed/weather_day.csv."
+
+[[slide]]
+id = "a_q3b"
+part = "appendix"
+layout = "table"
+kicker = "Függelék · 3. kérdés: versenynapok (2/2)"
+title = "Versenynapok nyár végétől októberig"
+data = "days_table_2"
+notes = "▲ = ezen a napon kevesebb futamot nyertünk, mint a divízió többi csapata."
+
+[[slide]]
+id = "a_heatmap"
+part = "appendix"
+layout = "chart"
+kicker = "Függelék · Kutyák versenyenként"
+title = "Hol futottak a kutyák gyorsabban vagy lassabban a saját szezonbeli formájuknál?"
+figure = "dog_heatmap"
+caption = "Minden kutya jellemző futási ideje versenyenként, a saját szezonbeli értékéhez képest (zöld: gyorsabb, narancs: lassabb). Csak azok a kutyák szerepelnek, akik legalább három versenyen futottak legalább öt értékelhető futamot."
+notes = "A szezonnyitó Hanácké versenyen több kutya is lassabb volt; októberben, Budějckejben voltak a leggyorsabbak."
+
+[[slide]]
+id = "a_weather"
+part = "appendix"
+layout = "two_charts"
+kicker = "Függelék · Időjárás – ellenőrzések"
+title = "A meleg hatása minden ellenőrzésben megmarad; a többi tényező hatása nulla közeli"
+figure = "weather_forest"
+figure2 = "weather_vs_venue"
+caption = "Ugyanaz a kutya ugyanazon a versenyen; a vonal a 95%-os bizonytalansági tartomány. Szürke sáv: ±{lane_margin_s|d2}, ennél kisebb hatás nem számít."
+caption2 = "A versenynapok sebessége a hőmérséklet szerint; a lila jel azt mutatja, mennyit magyaráz meg ebből az időjárás és az évszak."
+bullets = [
+  "{weather_variants} különböző módon is újraszámoltuk (versenyenként kihagyva egyet-egyet, más hőmérsékleti határral, hőérzettel, nedves talajjal, széllökésekkel stb.), plusz napon belül és csak a WRFT-kutyákra.",
+  "Egy gépi tanulási modell (gradient boosting) ugyanezt a görbét adja.",
+]
+notes = "A hibátlan futamok idejére vonatkozó becslés a Máchale versenyen múlik; a futásonkénti becslés megbízható."
+
+[[slide]]
+id = "a_day2"
+part = "appendix"
+layout = "text"
+kicker = "Függelék · A második nap"
+title = "A második nap előnye a rajtban és a váltásban jelentkezik, nem a futásban"
+bullets = [
+  "Hibátlan futamok a második napon: WRFT {day2_clean_heat_wrft|pp|ci}, mezőny {day2_clean_heat_field|pp|ci}.",
+  "Korai rajt rajtonként: {day2_false_start_wrft|pp|ci}.",
+  "Futamonként: korai rajtos futamok {day2_fs_heats|pp|ci}, korai váltásos futamok {day2_ep_heats|pp|ci}; a futási hibák száma nem változik.",
+  "Futási idő: {day2_run_time_field_s|sign|ci} futásonként – a sebesség ugyanaz.",
+  "Kiszűrtük: a csapatot, a versenyt, az időjárást, az akadálymagasságot és azt, hogy hányadik futam volt aznap.",
+  "Ha a második napot nem vettük figyelembe, úgy tűnt, mintha a melegben több lenne a hiba – valójában ez a szombat–vasárnap különbség volt.",
+]
+notes = "A rangsorban: {impact_day2} plusz győzelem szezononként."
+
+[[slide]]
+id = "a_lineups"
+part = "appendix"
+layout = "chart"
+kicker = "Függelék · Az összeállítások várható ideje"
+title = "Honnan jön a sorrend nyeresége? Főleg abból, hogy kevesebb a várható hiba"
+figure = "lineup_breakdown"
+caption = "Várható futamidő = rajt + négy futás + három váltás + a hibák várható időköltsége (a várható hibák száma × kb. {fault_cost_round_s|d0} újrafutás)."
+notes = "A csapatok a legutóbbi versenyük összeállításával szerepelnek."
+
+[[slide]]
+id = "a_backtest"
+part = "appendix"
+layout = "two_charts"
+kicker = "Függelék · Utólagos ellenőrzés és tartalékok"
+title = "A tavaszi–nyári adatokból számolt modell jól előre jelezte az őszi futamokat"
+figure = "lineup_backtest"
+figure2 = "height_dog"
+caption = "Előre jelzett és valódi tiszta idő a szeptemberi–októberi WRFT-futamokban (rangkorreláció: {backtest_spearman})."
+caption2 = "Kis „magasságadó” kutya: amit az alacsonyabb akadály a társaknak hoz (zöld), és amennyit a legjobb csapat összesen nyer vagy veszít vele (narancs)."
+data = "reserves"
+notes = "A modell a sebességet jól előre jelzi; azt viszont, hogy egy adott futamban lesz-e hiba, alig jobban, mint a pénzfeldobás (AUC {backtest_auc_clean}, {backtest_clean_heats} őszi futamon). A kutyák közötti hibaarány-különbségek ettől még valódiak, egy szezon alatt összeadódnak. Ősszel a modell {backtest_p_clean_predicted|d0} hibátlan futamot várt, a valóság {backtest_p_clean_observed|d0} lett."
+
+[[slide]]
+id = "a_questions"
+part = "appendix"
+layout = "text"
+kicker = "Függelék · Nyitott kérdések az edzőnek"
+title = "Öt kérdés, amelyre az adatok nem adnak választ"
+bullets = [
+  "Versenyezhet-e Pax 2024-ben? Júliusban futott utoljára, és benne van a legjobb négyesben.",
+  "Mi más szombatonként? Az érkezés, a bemelegítés, a gyakorlási lehetőség vagy a versenyrend?",
+  "Tud-e Maggie rajtolni? Eddig csak {dog.maggie.starts}-szer rajtolt, mindig hibátlanul.",
+  "Szándékosan tartják-e vissza a váltást a fiatal ivaros kanokra?",
+  "Volt-e fedett pályás verseny? Az időjárás elemzésénél minden versenyt szabadtérinek vettünk.",
+]
+notes = ""
+
+[[slide]]
+id = "a_glossary"
+part = "appendix"
+layout = "glossary"
+kicker = "Függelék · Szómagyarázat"
+title = "Fogalmak"
+notes = ""
+
+[[glossary]]
+term = "Futam"
+text = "Két csapat egy menete a rajttól a bíró sípjáig; egy mérkőzés több futamból áll."
+[[glossary]]
+term = "Hibátlan futam"
+text = "Mind a négy kutya lefutott, nem volt hiba és újrafutás."
+[[glossary]]
+term = "Tiszta idő"
+text = "A négy kutya futási idejének összege hibátlan futamban, a rajt és a váltások nélkül."
+[[glossary]]
+term = "Korai rajt"
+text = "Az első kutya a zöld lámpa előtt lépi át a vonalat."
+[[glossary]]
+term = "Korai váltás"
+text = "A következő kutya azelőtt lépi át a vonalat, hogy az előző visszaért volna."
+[[glossary]]
+term = "Futási hiba"
+text = "Kihagyott akadály, kifutás vagy elejtett labda; újra kell futni."
+[[glossary]]
+term = "A divízió többi csapata"
+text = "Azok a csapatok, amelyekkel a WRFT csapata ugyanazon a versenyen, ugyanabban a divízióban futott."
+[[glossary]]
+term = "Mezőny"
+text = "Az összes többi, nem WRFT-csapat a 2023-as versenyeken."
+[[glossary]]
+term = "Elkerülhető vereség"
+text = "Hiba miatt elvesztett futam, amelyet a csapat az aznapi szokásos tiszta idejével megnyert volna."
+[[glossary]]
+term = "Plusz győzelem"
+text = "Ennyivel több futamot nyerne a WRFT egy szezonban más klubok ellen, ha a javaslat megvalósulna."
+[[glossary]]
+term = "Bizonytalansági tartomány"
+text = "A számok után zárójelben: a becslés 95%-os tartománya. A valódi érték nagy valószínűséggel ebbe esik."
+[[glossary]]
+term = "Valódi (szignifikáns) különbség"
+text = "Olyan eltérés, amely nem magyarázható a véletlennel. Mivel sok dolgot vizsgáltunk egyszerre, szigorúbb küszöböt (Holm-korrekció) alkalmaztunk."
+[[glossary]]
+term = "Korrigált arány"
+text = "Kevés próbálkozásnál a kutya hibaarányát a csoportátlag felé igazítjuk, hogy egy-két véletlen hiba ne torzítson."
+[[glossary]]
+term = "Magasságadó kutya"
+text = "Kis kutya, akinek a marmagassága miatt az egész csapat alacsonyabb akadályon fut."
+
+# ============================================================================================
+# WEBOLDAL – a diák szövegén felül
+# ============================================================================================
+
+[site]
+title = "WRFT 2023 – interaktív szezonelemzés"
+description = "A Wild Runners Flyball Team 2023-as versenyeredményeinek elemzése: mitől nyerünk futamot, hol veszítünk, és mit tegyünk 2024-ben."
+pdf_button = "A prezentáció letöltése (PDF)"
+notes_button = "Előadói jegyzet (PDF)"
+builder_title = "Összeállítás-tervező"
+builder_lead = "Válassz négy kutyát és sorrendet: a program kiszámolja a várható futamidőt, a hibátlan futam esélyét és az akadálymagasságot – ugyanúgy, ahogyan a {lineup_orders_searched} lehetséges sorrendet is végigszámoltuk."
+builder_note = "Várható futamidő = rajt + négy futás (a legkisebb kutya akadálymagasságán) + három váltás + a várható hibák száma × {fault_cost_s|d1} újrafutás. Rajtolóként csak olyan kutyára van megbízható adat, amelyik legalább {min_starts}-szer rajtolt."
+days_title = "Versenynapok részletesen"
+days_lead = "Válassz egy versenynapot: a WRFT-csapatok eredményei, hibái és az aznapi időjárás."
+dogs_title = "A kutyák adatai"
+dogs_lead = "Mind a {wrft_dogs} WRFT-kutya. Az oszlop fejlécére kattintva rendezhetsz, a keresőmezővel szűrhetsz."
+downloads_title = "Letöltések"
+quadrant_caption = "Azok a WRFT-kutyák, akiknek legalább {pool_min_runs} értékelhető futásuk volt: jellemző futási idő és korrigált hibaarány (rajt, váltás, futás). Narancs: edzési célpont, lila: a legjobb négyes tagja. Vidd az egeret egy pontra a részletekért."
+ledger_more = "A teljes rangsor: mind a {ledger_levers} lehetőség táblázatban"
+footer = "Készült a WRFT edzője számára. Az adatok anonimizáltak; minden szám a projekt reports/ mappájának táblázataiból származik."

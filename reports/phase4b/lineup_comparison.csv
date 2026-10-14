@@ -1,0 +1,16 @@
+label,dog1,dog2,dog3,dog4,line_up,expected_s,no_fault_s,start_s,runs_s,passes_s,fault_s,p_clean,hurdle_cm
+A-team: Maggie > Enola > Pax > Alfie,Maggie,Enola,Pax,Alfie,Maggie > Enola > Pax > Alfie,19.2815,16.6017,0.0986,15.9501,0.5531,2.6798,0.7047,25.0
+Dreamers now: Maggie > Sirius > Alfie > Tyna,Maggie,Sirius,Alfie,Tyna,Maggie > Sirius > Alfie > Tyna,19.8331,16.9053,0.0986,16.2247,0.582,2.9278,0.6833,27.5
+Dreamers reordered: Maggie > Tyna > Sirius > Alfie,Maggie,Tyna,Sirius,Alfie,Maggie > Tyna > Sirius > Alfie,19.8327,16.9049,0.0986,16.2243,0.582,2.9278,0.6833,27.5
+Hopefuls now: Cookies > Enola > Maggie > Tyna,Cookies,Enola,Maggie,Tyna,Cookies > Enola > Maggie > Tyna,21.9852,16.9004,0.1386,16.2135,0.5483,5.0848,0.4842,27.5
+Hopefuls reordered: Maggie > Tyna > Cookies > Enola,Maggie,Tyna,Cookies,Enola,Maggie > Tyna > Cookies > Enola,19.7359,16.9486,0.0986,16.2139,0.6361,2.7872,0.6957,27.5
+Maximini now: Nina > Brooke > Bree > Alex,Nina,Brooke,Bree,Alex,Nina > Brooke > Bree > Alex,20.6924,17.5861,0.0685,16.9482,0.5694,3.1063,0.6645,27.5
+Maximini reordered: Bree > Brooke > Alex > Nina,Bree,Brooke,Alex,Nina,Bree > Brooke > Alex > Nina,20.3374,17.6979,0.1293,16.9477,0.6209,2.6395,0.709,27.5
+Nightfall now: Nina > Falco > Gerry > Hector,Nina,Falco,Gerry,Hector,Nina > Falco > Gerry > Hector,21.6514,17.7255,0.0685,17.0535,0.6035,3.9259,0.5974,25.0
+Nightfall reordered: Nina > Hector > Gerry > Falco,Nina,Hector,Gerry,Falco,Nina > Hector > Gerry > Falco,21.6513,17.7254,0.0685,17.0534,0.6035,3.9259,0.5974,25.0
+Wonders now: Rex > Hank > Hector > Gordon,Rex,Hank,Hector,Gordon,Rex > Hank > Hector > Gordon,26.0082,21.6893,0.1713,20.6326,0.8854,4.3188,0.5576,15.0
+Wonders reordered: Hank > Rex > Gordon > Hector,Hank,Rex,Gordon,Hector,Hank > Rex > Gordon > Hector,25.8957,21.6144,0.1682,20.6282,0.818,4.2813,0.563,15.0
+XXL now: Rex > Hank > Gerry > Bailey,Rex,Hank,Gerry,Bailey,Rex > Hank > Gerry > Bailey,24.4444,19.9955,0.1713,18.9453,0.8788,4.4489,0.5494,25.0
+XXL reordered: Gerry > Bailey > Rex > Hank,Gerry,Bailey,Rex,Hank,Gerry > Bailey > Rex > Hank,23.4135,20.0066,0.1517,18.9495,0.9054,3.4069,0.6423,25.0
+Zephyr now: Rex > Rocky > Scotty > Gordon,Rex,Rocky,Scotty,Gordon,Rex > Rocky > Scotty > Gordon,27.2559,23.0905,0.1713,21.8237,1.0954,4.1654,0.5692,15.0
+Zephyr reordered: Rocky > Rex > Gordon > Scotty,Rocky,Rex,Gordon,Scotty,Rocky > Rex > Gordon > Scotty,25.9108,23.0163,0.1396,21.8159,1.0608,2.8945,0.6866,15.0

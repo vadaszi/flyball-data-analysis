@@ -1,0 +1,5 @@
+fault,team_heats,loss_rate,corrected_n,rerun_seconds_median
+false_start,637,0.8619,141,7.76
+pass_fault,1369,0.8875,79,8.33
+run_fault,316,0.693,0,
+none,4752,0.3356,0,

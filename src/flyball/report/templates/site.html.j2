@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+{% macro bullets(items, cls="") %}{% if items %}<ul class="bullets {{ cls }}">{% for b in items %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
+{% macro heading(s, tag="h2") %}
+  {% if s.kicker %}<p class="kicker">{{ s.kicker }}</p>{% endif %}
+  <{{ tag }}>{{ s.title }}</{{ tag }}>
+  {% if s.lead %}<p class="lead">{{ s.lead }}</p>{% endif %}
+{% endmacro %}
+{% macro figure(name, caption="", alt="") %}
+  <figure class="fig"><img src="assets/img/{{ name }}.svg" alt="{{ alt or caption }}" loading="lazy">
+    {% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}</figure>
+{% endmacro %}
+{% macro table(t) %}
+  <div class="table-scroll"><table class="data">
+    <thead><tr>{% for c in t.columns %}<th class="{{ t.align[loop.index0] }}">{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>{% for r in t.rows %}<tr>{% for c in r %}<td class="{{ t.align[loop.index0] }}">{{ c }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+  </table></div>
+  {% if t.footnote %}<p class="footnote">{{ t.footnote }}</p>{% endif %}
+{% endmacro %}
+
+<header class="topbar">
+  <a class="brand" href="#osszefoglalo">WRFT <span>2023</span></a>
+  <nav>
+    <a href="#osszefoglalo">Összefoglaló</a><a href="#szezon">Szezon</a><a href="#merleg">Rangsor</a>
+    <a href="#karok">Lehetőségek</a><a href="#tervezo">Tervező</a><a href="#kerdesek">Kérdések</a>
+    <a href="#kutyak">Kutyák</a><a href="#akcioterv">Teendők</a><a href="#modszertan">Módszer</a>
+  </nav>
+  <a class="btn btn-small" href="{{ meta.pdf_name }}" download>PDF</a>
+</header>
+
+<main>
+<!-- ======================================================================= Összefoglaló -->
+<section id="osszefoglalo" class="hero">
+  <div class="wrap">
+    <p class="kicker">{{ meta.short_title }}</p>
+    <h1>{{ S.cover.title }}</h1>
+    <p class="lead">{{ S.cover.lead }}</p>
+    <div class="stats">
+      {% for v, label, sub in S.cover.stats %}<div class="stat"><div class="stat-value">{{ v }}</div>
+        <div class="stat-label">{{ label }}</div><div class="stat-sub">{{ sub }}</div></div>{% endfor %}
+    </div>
+    <div class="buttons">
+      <a class="btn" href="{{ meta.pdf_name }}" download>⬇ {{ site.pdf_button }}</a>
+      <a class="btn btn-ghost" href="{{ meta.notes_name }}" download>{{ site.notes_button }}</a>
+      <a class="btn btn-ghost" href="{{ meta.pdf_name }}" target="_blank" rel="noopener">Megnyitás új lapon</a>
+    </div>
+  </div>
+  <div class="wrap summary">
+    {{ heading(S.summary) }}
+    <div class="cards">
+      {% for c in S.summary.cards %}
+      <div class="card"><span class="tag tag-{{ c.tag|replace(' ', '-') }}">{{ c.tag }}</span>
+        <div class="card-value">{{ c.value }}</div><div class="card-unit">{{ c.unit }}</div>
+        <div class="card-name">{{ c.name }}</div><p>{{ c.text }}</p></div>
+      {% endfor %}
+    </div>
+    <dl class="answers">{% for a in S.summary.answers %}<div><dt>{{ a.q }}</dt><dd>{{ a.a }}</dd></div>{% endfor %}</dl>
+    <p class="note">{{ legend.wins }} {{ legend.ci }}</p>
+  </div>
+</section>
+
+<!-- ======================================================================= Szezon -->
+<section id="szezon">
+  <div class="wrap">
+    {{ heading(S.season) }}
+    <p class="hint">Minden kis négyzet egy WRFT-versenynap: a nagy szám a hibátlan futamok aránya, alatta a győzelmeké. Kattints egy napra a részletekért.</p>
+    <div id="calendar" class="calendar" aria-label="Versenynapok"></div>
+    <div class="legend-row"><span class="sw sw-bad"></span>kevesebb hibátlan futam, mint a mezőnyben
+      <span class="sw sw-mid"></span>a mezőny szintje <span class="sw sw-good"></span>több hibátlan futam
+      <span class="tri">▲</span>kevesebb győzelem, mint a divízió többi csapatáé</div>
+    {{ bullets(S.season.bullets) }}
+  </div>
+</section>
+
+<!-- ======================================================================= Mi nyeri a futamot -->
+<section id="futam" class="alt">
+  <div class="wrap">
+    {{ heading(S.what_wins) }}
+    {{ figure("what_wins", S.what_wins.caption) }}
+    {{ bullets(S.what_wins.bullets, "grid") }}
+    <h3>{{ S.heat_strip.title }}</h3>
+    {{ figure("heat_strip", S.heat_strip.caption) }}
+    {{ bullets(S.heat_strip.bullets, "grid") }}
+  </div>
+</section>
+
+<!-- ======================================================================= Rangsor -->
+<section id="merleg">
+  <div class="wrap">
+    {{ heading(S.ledger) }}
+    <div id="ledger-chart" class="vega" role="img" aria-label="A lehetőségek rangsora"></div>
+    <p class="figcap">{{ S.ledger.caption }} Vidd az egeret egy sávra a részletekért.</p>
+    {{ bullets(S.ledger.bullets, "grid") }}
+    <details class="more"><summary>{{ site.ledger_more }}</summary>
+      <div id="ledger-table"></div>
+      {{ bullets(S.a_ledger.bullets) }}
+    </details>
+  </div>
+</section>
+
+<!-- ======================================================================= Karok -->
+<section id="karok" class="alt">
+  <div class="wrap">
+    {{ heading(S.order) }}
+    <div class="lineups">
+      {% for t in S.order.table.teams %}
+      <div class="lineup">
+        <div class="lineup-head"><b>{{ t.team }}</b><span class="gain">−{{ t.gain }} / futam</span></div>
+        <div class="olabel">most</div>
+        <ol class="order now">{% for d in t.now %}<li>{{ d }}</li>{% endfor %}</ol>
+        <div class="olabel">javasolt</div>
+        <ol class="order best">{% for d in t.best %}<li{% if loop.first and t.starter_changed %} class="moved"{% endif %}>{{ d }}</li>{% endfor %}</ol>
+        <div class="wins"><b>{{ t.wins }}</b> plusz győzelem / szezon <span class="muted">({{ t.ci }})</span></div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="muted small">Már most is (majdnem) a legjobb sorrendben fut: {{ S.order.table.optimal|join(", ") }}.</p>
+    {{ bullets(S.order.bullets, "grid") }}
+  </div>
+  <div class="wrap">
+    {{ heading(S.saturday) }}
+    <div class="split">
+      {{ figure("day_slope", "A hibátlan futamok aránya az első és a második versenynapon; minden halvány vonal egy WRFT-csapat egy kétnapos versenyen.") }}
+      <div>{{ bullets(S.saturday.bullets) }}</div>
+    </div>
+  </div>
+  <div class="wrap">
+    {{ heading(S.faults) }}
+    <div class="split">
+      <div><div id="quadrant-chart" class="vega" role="img" aria-label="Kutyák: sebesség és megbízhatóság"></div>
+        <p class="figcap">{{ site.quadrant_caption }}</p></div>
+      <div>{{ table(S.faults.table) }}{{ bullets(S.faults.bullets) }}</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================= Tervező -->
+<section id="tervezo">
+  <div class="wrap">
+    <p class="kicker">Próbáld ki</p>
+    <h2>{{ site.builder_title }}</h2>
+    <p class="lead">{{ site.builder_lead }}</p>
+    <div class="builder">
+      <div class="builder-controls">
+        <label class="preset">Kiinduló összeállítás
+          <select id="preset"></select></label>
+        <div class="slots" id="slots"></div>
+        <div class="builder-buttons">
+          <button id="best-order" class="btn">A legjobb sorrend ezzel a négy kutyával</button>
+        </div>
+        <p class="note">{{ site.builder_note }}</p>
+      </div>
+      <div class="builder-result" aria-live="polite">
+        <div class="res-main"><div class="res-label">Várható futamidő</div><div id="res-expected" class="res-value">–</div>
+          <div id="res-delta" class="res-sub"></div></div>
+        <div class="res-bar" id="res-bar"></div>
+        <div class="res-legend"><span class="k k-start"></span>rajt <span class="k k-runs"></span>négy futás
+          <span class="k k-pass"></span>három váltás <span class="k k-fault"></span>a hibák várható időköltsége</div>
+        <dl class="res-grid">
+          <div><dt>Hibák nélkül</dt><dd id="res-nofault">–</dd></div>
+          <div><dt>A hibátlan futam esélye</dt><dd id="res-clean">–</dd></div>
+          <div><dt>Akadálymagasság</dt><dd id="res-hurdle">–</dd></div>
+          <div><dt>Várható hibák száma</dt><dd id="res-nf">–</dd></div>
+        </dl>
+        <p id="res-warn" class="warn" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================= Kérdések -->
+<section id="kerdesek" class="alt">
+  <div class="wrap">
+    {{ heading(S.q1q2) }}
+    <div class="split even">
+      <div><h3>Q1 · Pálya színe</h3>{{ figure("lane_slopes", S.q1q2.caption) }}{{ bullets(S.q1q2.bullets) }}</div>
+      <div><h3>Q2 · Váltótárs neme, ivarállapota</h3>{{ figure("partner_forest", S.q1q2.caption2) }}{{ bullets(S.q1q2.bullets2) }}</div>
+    </div>
+  </div>
+  <div class="wrap" id="versenynapok">
+    {{ heading(S.competitions) }}
+    {{ figure("competition_panels", S.competitions.caption) }}
+    {{ bullets(S.competitions.bullets, "grid") }}
+    <h3>{{ site.days_title }}</h3>
+    <p class="hint">{{ site.days_lead }}</p>
+    <div id="day-picker" class="day-picker" role="tablist"></div>
+    <div id="day-detail" class="day-detail"></div>
+  </div>
+  <div class="wrap">
+    {{ heading(S.weather) }}
+    <div class="split">
+      {{ figure("heat_curve", "Mennyivel futnak lassabban a kutyák a saját szintjüknél, a hőmérséklet szerint: a pontok kétfokonkénti átlagok, a lila vonal egy gépi tanulási modell görbéje.") }}
+      <div>
+        <table class="verdict">{% for v in S.weather.verdict %}
+          <tr class="v-{{ v.status }}"><td class="v-icon">{{ "▲" if v.status == "yes" else "●" }}</td><th>{{ v.factor }}</th>
+            <td>{{ v.verdict }}<br><span class="muted">{{ v.effect }}</span></td></tr>{% endfor %}</table>
+        {{ bullets(S.weather.bullets) }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================= Kutyák -->
+<section id="kutyak">
+  <div class="wrap">
+    <p class="kicker">Kutyák</p>
+    <h2>{{ site.dogs_title }}</h2>
+    <p class="lead">{{ site.dogs_lead }}</p>
+    {{ heading(S.lineup, "h3") }}
+    <div class="ateam-card">
+      {% for d in S.lineup.table.tiles %}
+      <div class="tile"><div class="tile-role">{{ d.role }}</div><div class="tile-dog">{{ d.dog }}</div>
+        <div class="tile-run">{{ d.run }}</div><div class="tile-line">{{ d.line }}</div>
+        <div class="tile-line">futási hiba {{ d.run_fault }} · {{ d.height }}</div></div>
+      {% endfor %}
+    </div>
+    <div class="split">
+      <div>{{ bullets(S.lineup.bullets) }}</div>
+      <div>{{ figure("stability", "Milyen gyakran kerül be a kutya a legjobb négyesbe, ha az adatokból véletlenszerűen újraszámoljuk.") }}
+        {{ figure("height_dog", "Kis „magasságadó” kutya: amennyit a társak nyernek (zöld), és amennyit a legjobb csapat összesen nyer vagy veszít (narancs).") }}</div>
+    </div>
+    <div class="table-tools"><input id="dog-search" type="search" placeholder="Keresés: név, nem vagy fajta…" aria-label="Kutyák szűrése">
+      <span id="dog-count" class="muted"></span></div>
+    <div class="table-scroll"><table class="data sortable" id="dog-table"></table></div>
+    <p class="footnote">* Korrigált arány: kevés próbálkozásnál a csoportátlag felé igazítva, hogy egy-két véletlen hiba ne torzítson. Összevethető futás: a kutya becsült futási ideje huszonöt centis akadályon, első helyen futva – így a különböző magasságon futó kutyák is összehasonlíthatók.</p>
+  </div>
+</section>
+
+<!-- ======================================================================= Akcióterv -->
+<section id="akcioterv" class="alt">
+  <div class="wrap">
+    {{ heading(S.actions) }}
+    <div class="table-scroll"><table class="data actions">
+      <thead><tr><th>#</th><th>Teendő</th><th>Ki</th><th>Mikor</th><th>Mivel mérjük</th><th>2023 → cél</th></tr></thead>
+      <tbody>{% for a in S.actions.actions %}<tr><td class="num">{{ loop.index }}</td><td class="what">{{ a.what }}</td>
+        <td>{{ a.who }}</td><td><span class="tag tag-{{ a.tag|replace(' ', '-') }}">{{ a.when }}</span></td>
+        <td>{{ a.kpi }}</td><td>{{ a.target }}</td></tr>{% endfor %}</tbody>
+    </table></div>
+    <h3>{{ S.a_questions.title }}</h3>
+    {{ bullets(S.a_questions.bullets) }}
+  </div>
+</section>
+
+<!-- ======================================================================= Módszertan -->
+<section id="modszertan">
+  <div class="wrap">
+    {{ heading(S.methods) }}
+    {{ bullets(S.methods.bullets) }}
+    <h3>Részletes ábrák és táblázatok (függelék)</h3>
+    {% for sid in ["a_teams", "a_model", "a_window", "a_q1", "a_heatmap", "a_weather", "a_lineups", "a_backtest"] %}
+    {% set s = S[sid] %}
+    <details class="more"><summary>{{ s.kicker|replace("Függelék · ", "") }}: {{ s.title }}</summary>
+      {{ figure(s.figure, s.caption) }}
+      {% if s.figure2 %}{{ figure(s.figure2, s.caption2) }}{% endif %}
+      {% if s.table %}{{ table(s.table) }}{% endif %}
+      {{ bullets(s.bullets) }}
+    </details>
+    {% endfor %}
+    {% for sid in ["a_team_table", "a_q2", "a_day2", "a_data"] %}
+    {% set s = S[sid] %}
+    <details class="more"><summary>{{ s.kicker|replace("Függelék · ", "") }}: {{ s.title }}</summary>
+      {% if s.table %}{{ table(s.table) }}{% endif %}
+      {{ bullets(s.bullets) }}
+    </details>
+    {% endfor %}
+    <h3>Szómagyarázat</h3>
+    <dl class="glossary">{% for g in glossary %}<div><dt>{{ g.term }}</dt><dd>{{ g.text }}</dd></div>{% endfor %}</dl>
+    <h3>{{ site.downloads_title }}</h3>
+    <ul class="downloads">
+      <li><a href="{{ meta.pdf_name }}" download>{{ site.pdf_button }}</a></li>
+      <li><a href="{{ meta.notes_name }}" download>{{ site.notes_button }}</a></li>
+      <li><a href="adatok/kutya_adatlapok.csv" download>A kutyák adatai (CSV)</a></li>
+      <li><a href="adatok/versenynapok.csv" download>Versenynapok az időjárással (CSV)</a></li>
+      <li><a href="adatok/csapat_versenynapok.csv" download>A csapatok eredményei versenynaponként (CSV)</a></li>
+      <li><a href="adatok/lehetosegek_rangsora.csv" download>A lehetőségek teljes rangsora (CSV)</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer class="site-foot"><div class="wrap">{{ site.footer }}</div></footer>
+
+<script src="assets/vendor/vega.min.js"></script>
+<script src="assets/vendor/vega-lite.min.js"></script>
+<script src="assets/vendor/vega-embed.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/lineup.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

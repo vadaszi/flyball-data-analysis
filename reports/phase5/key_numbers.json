@@ -1,0 +1,784 @@
+{
+ "wrft_heats_with_result": {
+  "value": 1116,
+  "unit": "count",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "wrft_win_rate": {
+  "value": 0.4077,
+  "unit": "share",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5",
+  "ci": [
+   0.3792,
+   0.4368
+  ]
+ },
+ "field_win_rate": {
+  "value": 0.4562,
+  "unit": "share",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "wrft_clean_heat_rate": {
+  "value": 0.5439,
+  "unit": "share",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "field_clean_heat_rate": {
+  "value": 0.5657,
+  "unit": "share",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "wrft_false_start_heats": {
+  "value": 0.1577,
+  "unit": "share",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "field_false_start_heats": {
+  "value": 0.1057,
+  "unit": "share",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "wrft_median_pass_s": {
+  "value": 0.2,
+  "unit": "s",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "field_median_pass_s": {
+  "value": 0.15,
+  "unit": "s",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "wrft_median_run_s": {
+  "value": 4.28,
+  "unit": "s",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "field_median_run_s": {
+  "value": 4.27,
+  "unit": "s",
+  "source": "reports/phase3/team_summary.csv",
+  "log_step": "2.5"
+ },
+ "wrft_losses": {
+  "value": 660,
+  "unit": "count",
+  "source": "reports/phase3/fault_attribution.csv",
+  "log_step": "2.4"
+ },
+ "wrft_losses_with_fault_share": {
+  "value": 0.6212,
+  "unit": "share",
+  "source": "reports/phase3/fault_attribution.csv",
+  "log_step": "2.4"
+ },
+ "wrft_avoidable_losses": {
+  "value": 155,
+  "unit": "count",
+  "source": "reports/phase3/fault_attribution.csv",
+  "log_step": "2.4"
+ },
+ "wrft_avoidable_share": {
+  "value": 0.2348,
+  "unit": "share",
+  "source": "reports/phase3/fault_attribution.csv",
+  "log_step": "2.4"
+ },
+ "win_clean_vs_clean": {
+  "value": 0.4929,
+  "unit": "share",
+  "source": "reports/phase3/win_by_fault_status.csv",
+  "log_step": "2.3",
+  "ci": [
+   0.4765,
+   0.5094
+  ]
+ },
+ "win_clean_vs_fault": {
+  "value": 0.8498,
+  "unit": "share",
+  "source": "reports/phase3/win_by_fault_status.csv",
+  "log_step": "2.3",
+  "ci": [
+   0.8332,
+   0.865
+  ]
+ },
+ "win_fault_vs_clean": {
+  "value": 0.089,
+  "unit": "share",
+  "source": "reports/phase3/win_by_fault_status.csv",
+  "log_step": "2.3",
+  "ci": [
+   0.0771,
+   0.1025
+  ]
+ },
+ "heat_model_r2_speed": {
+  "value": 0.017,
+  "unit": "r2",
+  "source": "reports/phase3/heat_win_model_fit.csv",
+  "log_step": "2.3"
+ },
+ "heat_model_r2_faults": {
+  "value": 0.2495,
+  "unit": "r2",
+  "source": "reports/phase3/heat_win_model_fit.csv",
+  "log_step": "2.3"
+ },
+ "rerun_cost_false_start_s": {
+  "value": 7.76,
+  "unit": "s",
+  "source": "reports/phase3/fault_cost.csv",
+  "log_step": "2.4"
+ },
+ "rerun_cost_pass_fault_s": {
+  "value": 8.33,
+  "unit": "s",
+  "source": "reports/phase3/fault_cost.csv",
+  "log_step": "2.4"
+ },
+ "xxl_false_start_gap": {
+  "value": 0.2,
+  "unit": "share",
+  "source": "reports/phase3/peer_benchmark.csv",
+  "log_step": "2.5",
+  "ci": [
+   0.1512,
+   0.2488
+  ]
+ },
+ "zephyr_run_fault_gap": {
+  "value": 0.0788,
+  "unit": "share",
+  "source": "reports/phase3/peer_benchmark.csv",
+  "log_step": "2.5",
+  "ci": [
+   0.0618,
+   0.0959
+  ]
+ },
+ "hopefuls_early_pass_gap": {
+  "value": 0.0579,
+  "unit": "share",
+  "source": "reports/phase3/peer_benchmark.csv",
+  "log_step": "2.5",
+  "ci": [
+   0.0225,
+   0.0932
+  ]
+ },
+ "cookies_false_start_rate": {
+  "value": 0.3725,
+  "unit": "share",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7",
+  "ci": [
+   0.2532,
+   0.5097
+  ]
+ },
+ "scotty_false_start_rate": {
+  "value": 0.4444,
+  "unit": "share",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7",
+  "ci": [
+   0.2759,
+   0.6269
+  ]
+ },
+ "rex_false_start_rate": {
+  "value": 0.2364,
+  "unit": "share",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7",
+  "ci": [
+   0.1437,
+   0.3635
+  ]
+ },
+ "sunny_false_start_rate": {
+  "value": 0.1695,
+  "unit": "share",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7",
+  "ci": [
+   0.1125,
+   0.2473
+  ]
+ },
+ "moon_early_pass_rate": {
+  "value": 0.1667,
+  "unit": "share",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7",
+  "ci": [
+   0.1106,
+   0.2435
+  ]
+ },
+ "bree_early_pass_rate": {
+  "value": 0.1341,
+  "unit": "share",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7",
+  "ci": [
+   0.0918,
+   0.1917
+  ]
+ },
+ "ted_run_fault_rate": {
+  "value": 0.3226,
+  "unit": "share",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7",
+  "ci": [
+   0.1857,
+   0.4986
+  ]
+ },
+ "cookies_starts": {
+  "value": 51,
+  "unit": "count",
+  "source": "reports/dog_scorecards.csv",
+  "log_step": "2.7"
+ },
+ "start_fault_rate_0.05_0.08": {
+  "value": 0.083,
+  "unit": "share",
+  "source": "reports/phase3/pass_window.csv",
+  "log_step": "2.6",
+  "ci": [
+   0.0726,
+   0.0947
+  ]
+ },
+ "start_fault_rate_0.14_0.18": {
+  "value": 0.157,
+  "unit": "share",
+  "source": "reports/phase3/pass_window.csv",
+  "log_step": "2.6",
+  "ci": [
+   0.1302,
+   0.1882
+  ]
+ },
+ "pass_fault_rate_under_0.08": {
+  "value": 0.1091,
+  "unit": "share",
+  "source": "reports/phase3/pass_window.csv",
+  "log_step": "2.6",
+  "ci": [
+   0.1005,
+   0.1184
+  ]
+ },
+ "pass_fault_rate_0.25_0.35": {
+  "value": 0.0569,
+  "unit": "share",
+  "source": "reports/phase3/pass_window.csv",
+  "log_step": "2.6",
+  "ci": [
+   0.0446,
+   0.0723
+  ]
+ },
+ "pass_fault_rate_over_0.35": {
+  "value": 0.0335,
+  "unit": "share",
+  "source": "reports/phase3/pass_window.csv",
+  "log_step": "2.6",
+  "ci": [
+   0.024,
+   0.0467
+  ]
+ },
+ "hurdle_step_s": {
+  "value": 0.0204,
+  "unit": "s",
+  "source": "reports/phase4b/weather_controls.csv",
+  "log_step": "5.3",
+  "ci": [
+   0.0133,
+   0.0275
+  ]
+ },
+ "lane_field_s": {
+  "value": 0.0064,
+  "unit": "s",
+  "source": "reports/phase4a/lane_run_effect.csv",
+  "log_step": "4.2",
+  "ci": [
+   0.0028,
+   0.0101
+  ]
+ },
+ "lane_wrft_s": {
+  "value": 0.006,
+  "unit": "s",
+  "source": "reports/phase4a/lane_run_effect.csv",
+  "log_step": "4.2",
+  "ci": [
+   -0.0061,
+   0.0181
+  ]
+ },
+ "lane_ring_day_max_s": {
+  "value": 0.0321,
+  "unit": "s",
+  "source": "reports/phase4a/lane_by_ring_day.csv",
+  "log_step": "4.2"
+ },
+ "lane_ring_days": {
+  "value": 28,
+  "unit": "count",
+  "source": "reports/phase4a/lane_by_ring_day.csv",
+  "log_step": "4.2"
+ },
+ "held_pass_intact_male": {
+  "value": 0.1059,
+  "unit": "share",
+  "source": "reports/phase4a/partner_contrasts.csv",
+  "log_step": "4.3",
+  "ci": [
+   0.031,
+   0.1807
+  ]
+ },
+ "intact_female_dogs": {
+  "value": 2,
+  "unit": "count",
+  "source": "reports/phase4a/partner_contrasts.csv",
+  "log_step": "4.3"
+ },
+ "wrft_competition_days": {
+  "value": 20,
+  "unit": "count",
+  "source": "reports/phase4a/competition_days.csv",
+  "log_step": "4.4"
+ },
+ "season_trend_wrft_pct": {
+  "value": -0.291,
+  "unit": "pct",
+  "source": "reports/phase4a/season_trend.csv",
+  "log_step": "4.4",
+  "ci": [
+   -0.3602,
+   -0.2217
+  ]
+ },
+ "speed_index_field_min_pct": {
+  "value": -2.0396,
+  "unit": "pct",
+  "source": "reports/phase4a/speed_index.csv",
+  "log_step": "4.4"
+ },
+ "speed_index_field_max_pct": {
+  "value": 1.8688,
+  "unit": "pct",
+  "source": "reports/phase4a/speed_index.csv",
+  "log_step": "4.4"
+ },
+ "heat_run_s": {
+  "value": 0.0834,
+  "unit": "s",
+  "source": "reports/phase4b/weather_effects.csv",
+  "log_step": "5.2",
+  "ci": [
+   0.0497,
+   0.1174
+  ]
+ },
+ "heat_run_pct": {
+  "value": 1.9537,
+  "unit": "pct",
+  "source": "reports/phase4b/weather_effects.csv",
+  "log_step": "5.2"
+ },
+ "heat_wrft_run_s": {
+  "value": 0.0724,
+  "unit": "s",
+  "source": "reports/phase4b/weather_effects.csv",
+  "log_step": "5.2",
+  "ci": [
+   -0.006,
+   0.1523
+  ]
+ },
+ "humidity_run_s": {
+  "value": 0.0181,
+  "unit": "s",
+  "source": "reports/phase4b/weather_effects.csv",
+  "log_step": "5.2",
+  "ci": [
+   0.0065,
+   0.0298
+  ]
+ },
+ "wind_run_s": {
+  "value": -0.007,
+  "unit": "s",
+  "source": "reports/phase4b/weather_effects.csv",
+  "log_step": "5.2",
+  "ci": [
+   -0.019,
+   0.005
+  ]
+ },
+ "rain_run_s": {
+  "value": -0.0055,
+  "unit": "s",
+  "source": "reports/phase4b/weather_effects.csv",
+  "log_step": "5.2",
+  "ci": [
+   -0.0138,
+   0.003
+  ]
+ },
+ "weather_day_r2": {
+  "value": 0.7682,
+  "unit": "r2",
+  "source": "reports/phase4b/weather_day_fit.csv",
+  "log_step": "5.5"
+ },
+ "day2_clean_heat_field": {
+  "value": 0.1887,
+  "unit": "share",
+  "source": "reports/phase4b/weather_controls.csv",
+  "log_step": "5.3",
+  "ci": [
+   0.1587,
+   0.2188
+  ]
+ },
+ "day2_clean_heat_wrft": {
+  "value": 0.1597,
+  "unit": "share",
+  "source": "reports/phase4b/weather_controls.csv",
+  "log_step": "5.3",
+  "ci": [
+   0.0946,
+   0.2248
+  ]
+ },
+ "day2_false_start_wrft": {
+  "value": -0.1004,
+  "unit": "share",
+  "source": "reports/phase4b/weather_controls.csv",
+  "log_step": "5.3",
+  "ci": [
+   -0.1339,
+   -0.0668
+  ]
+ },
+ "day2_run_time_field_s": {
+  "value": 0.0002,
+  "unit": "s",
+  "source": "reports/phase4b/weather_controls.csv",
+  "log_step": "5.3",
+  "ci": [
+   -0.0088,
+   0.0092
+  ]
+ },
+ "fatigue_run_s": {
+  "value": 0.0054,
+  "unit": "s",
+  "source": "reports/phase4b/weather_controls.csv",
+  "log_step": "5.3",
+  "ci": [
+   0.0043,
+   0.0065
+  ]
+ },
+ "a_team": {
+  "value": "Maggie > Enola > Pax > Alfie",
+  "unit": "text",
+  "source": "reports/phase4b/lineup_top.csv",
+  "log_step": "5.8"
+ },
+ "a_team_expected_s": {
+  "value": 19.2815,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_top.csv",
+  "log_step": "5.8"
+ },
+ "a_team_no_fault_s": {
+  "value": 16.6017,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_top.csv",
+  "log_step": "5.8"
+ },
+ "a_team_runs_s": {
+  "value": 15.9501,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_top.csv",
+  "log_step": "5.8"
+ },
+ "a_team_p_clean": {
+  "value": 0.7047,
+  "unit": "share",
+  "source": "reports/phase4b/lineup_top.csv",
+  "log_step": "5.8"
+ },
+ "lineup_orders_searched": {
+  "value": 2686320,
+  "unit": "count",
+  "source": "reports/phase4b/lineup_meta.csv",
+  "log_step": "5.8"
+ },
+ "fault_cost_s": {
+  "value": 7.9647,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_meta.csv",
+  "log_step": "5.8"
+ },
+ "hopefuls_order_gain_s": {
+  "value": 2.2493,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_teams.csv",
+  "log_step": "5.9"
+ },
+ "zephyr_order_gain_s": {
+  "value": 1.3451,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_teams.csv",
+  "log_step": "5.9"
+ },
+ "xxl_order_gain_s": {
+  "value": 1.031,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_teams.csv",
+  "log_step": "5.9"
+ },
+ "easy_height_dog_net_s": {
+  "value": -0.5482,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_height_dog.csv",
+  "log_step": "5.9"
+ },
+ "gordon_height_dog_net_s": {
+  "value": -2.4254,
+  "unit": "s",
+  "source": "reports/phase4b/lineup_height_dog.csv",
+  "log_step": "5.9"
+ },
+ "backtest_spearman": {
+  "value": 0.9131,
+  "unit": "r",
+  "source": "reports/phase4b/lineup_backtest.csv",
+  "log_step": "5.10"
+ },
+ "backtest_auc_clean": {
+  "value": 0.5519,
+  "unit": "auc",
+  "source": "reports/phase4b/lineup_backtest.csv",
+  "log_step": "5.10"
+ },
+ "stability_enola": {
+  "value": 1.0,
+  "unit": "share",
+  "source": "reports/phase4b/lineup_stability_dogs.csv",
+  "log_step": "5.10"
+ },
+ "stability_alfie": {
+  "value": 0.72,
+  "unit": "share",
+  "source": "reports/phase4b/lineup_stability_dogs.csv",
+  "log_step": "5.10"
+ },
+ "stability_maggie": {
+  "value": 0.56,
+  "unit": "share",
+  "source": "reports/phase4b/lineup_stability_dogs.csv",
+  "log_step": "5.10"
+ },
+ "stability_pax": {
+  "value": 0.58,
+  "unit": "share",
+  "source": "reports/phase4b/lineup_stability_dogs.csv",
+  "log_step": "5.10"
+ },
+ "impact_ceiling": {
+  "value": 148.4392,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   127.4282,
+   165.3692
+  ]
+ },
+ "impact_day2": {
+  "value": 28.216,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   17.3666,
+   41.5343
+  ]
+ },
+ "impact_all_fault_gaps": {
+  "value": 26.3273,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   20.5912,
+   32.7597
+  ]
+ },
+ "impact_false_start_gaps": {
+  "value": 11.5447,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   7.7395,
+   15.6338
+  ]
+ },
+ "impact_early_pass_gaps": {
+  "value": 7.9445,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   4.6689,
+   11.94
+  ]
+ },
+ "impact_run_fault_gaps": {
+  "value": 6.152,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   3.9887,
+   8.4382
+  ]
+ },
+ "impact_xxl_false_starts": {
+  "value": 3.6308,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   2.4235,
+   4.8795
+  ]
+ },
+ "impact_zephyr_run_faults": {
+  "value": 4.4141,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   2.8943,
+   5.7291
+  ]
+ },
+ "impact_hopefuls_reorder": {
+  "value": 12.1485,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   8.9048,
+   14.4956
+  ]
+ },
+ "impact_zephyr_reorder": {
+  "value": 8.4633,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   6.5293,
+   9.9433
+  ]
+ },
+ "impact_xxl_reorder": {
+  "value": 3.9516,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   2.606,
+   4.9773
+  ]
+ },
+ "impact_maximini_reorder": {
+  "value": 2.5357,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   1.6243,
+   3.3356
+  ]
+ },
+ "impact_all_reorders": {
+  "value": 27.3665,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   20.3003,
+   32.6095
+  ]
+ },
+ "impact_zephyr_swap": {
+  "value": 45.0261,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   30.9303,
+   57.6067
+  ]
+ },
+ "impact_hopefuls_swap": {
+  "value": 15.8618,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   12.2154,
+   18.5768
+  ]
+ },
+ "impact_heat": {
+  "value": 3.4528,
+  "unit": "wins",
+  "source": "reports/phase5/impact_ledger.csv",
+  "log_step": "6.1",
+  "ci": [
+   1.7763,
+   5.3522
+  ]
+ },
+ "wrft_heats_vs_clubs": {
+  "value": 907,
+  "unit": "count",
+  "source": "reports/phase5/impact_meta.csv",
+  "log_step": "6.1"
+ },
+ "wrft_win_rate_vs_clubs": {
+  "value": 0.3903,
+  "unit": "share",
+  "source": "reports/phase5/impact_meta.csv",
+  "log_step": "6.1"
+ }
+}

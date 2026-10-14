@@ -1,0 +1,215 @@
+row_id,date,competition,team,line_up,hurdle_cm,clean_heat,actual_clean_time,predicted_clean_time,baseline_clean_time,predicted_p_clean
+4786,2023-09-02,Mistrovství České republiky,wildrunners zephyr,Fleur > Hank > Mason > Bailey,27.5,False,,18.7388,18.555,0.5496
+4818,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Maggie > Alfie,27.5,True,15.98,16.3807,16.09,0.4001
+4820,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Maggie > Alfie,27.5,True,16.03,16.3807,16.09,0.4001
+4822,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Maggie > Alfie,27.5,False,,16.3807,16.09,0.4001
+4836,2023-09-02,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,17.16,17.0586,17.045,0.5723
+4838,2023-09-02,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,16.82,17.0586,17.045,0.5723
+4840,2023-09-02,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,16.87,17.0586,17.045,0.5723
+4843,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.27,16.6498,16.715,0.602
+4845,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.38,16.6498,16.715,0.602
+4847,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.31,16.6498,16.715,0.602
+4855,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Bella > Ashley,25.0,False,,17.395,17.415,0.6066
+4857,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Bella > Ashley,25.0,False,,17.395,17.415,0.6066
+4859,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Bella > Ashley,25.0,True,17.69,17.395,17.415,0.6066
+4873,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,False,,15.9904,15.925,0.6132
+4875,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.06,15.9904,15.925,0.6132
+4877,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,False,,15.9904,15.925,0.6132
+4884,2023-09-02,Mistrovství České republiky,wildrunners zephyr,Hank > Mason > Bailey > Kesha,22.5,False,,19.0076,19.045,0.561
+4886,2023-09-02,Mistrovství České republiky,wildrunners zephyr,Hank > Mason > Bailey > Kesha,22.5,True,18.67,19.0076,19.045,0.561
+4888,2023-09-02,Mistrovství České republiky,wildrunners zephyr,Hank > Mason > Bailey > Kesha,22.5,True,19.11,19.0076,19.045,0.561
+4890,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Dixie > Sirius,25.0,False,,16.8011,16.825,0.5796
+4892,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Dixie > Sirius,25.0,False,,16.8011,16.825,0.5796
+4894,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Dixie > Sirius,25.0,True,16.14,16.8011,16.825,0.5796
+4902,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,17.68,17.5995,17.685,0.6026
+4904,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,False,,17.5995,17.685,0.6026
+4906,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,17.62,17.5995,17.685,0.6026
+4933,2023-09-02,Mistrovství České republiky,wildrunners zephyr,Fleur > Mason > Bailey > Kesha,22.5,True,18.72,18.8533,18.84,0.5164
+4935,2023-09-02,Mistrovství České republiky,wildrunners zephyr,Fleur > Mason > Bailey > Kesha,22.5,True,18.81,18.8533,18.84,0.5164
+4937,2023-09-02,Mistrovství České republiky,wildrunners zephyr,Fleur > Mason > Bailey > Kesha,22.5,False,,18.8533,18.84,0.5164
+4938,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.59,16.6498,16.715,0.602
+4940,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,False,,16.6498,16.715,0.602
+4942,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.81,16.6498,16.715,0.602
+4950,2023-09-02,Mistrovství České republiky,wildrunners maximini,Bree > Sara > Bella > Ashley,25.0,True,17.44,17.6699,17.74,0.6893
+4952,2023-09-02,Mistrovství České republiky,wildrunners maximini,Bree > Sara > Bella > Ashley,25.0,False,,17.6699,17.74,0.6893
+4954,2023-09-02,Mistrovství České republiky,wildrunners maximini,Bree > Sara > Bella > Ashley,25.0,False,,17.6699,17.74,0.6893
+4963,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.04,15.9904,15.925,0.6132
+4965,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,15.84,15.9904,15.925,0.6132
+4967,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.1,15.9904,15.925,0.6132
+4974,2023-09-02,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,16.82,17.0586,17.045,0.5723
+4976,2023-09-02,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,16.71,17.0586,17.045,0.5723
+4978,2023-09-02,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,17.05,17.0586,17.045,0.5723
+4987,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.47,16.6498,16.715,0.602
+4989,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.39,16.6498,16.715,0.602
+4991,2023-09-02,Mistrovství České republiky,wildrunners dreamers,Sunny > Tyna > Dixie > Sirius,25.0,True,16.3,16.5608,16.57,0.5635
+5001,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,False,,17.3945,17.305,0.6299
+5003,2023-09-02,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,False,,17.3945,17.305,0.6299
+5016,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Moon > Alfie,27.5,True,16.12,16.2832,16.015,0.4031
+5018,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Moon > Alfie,27.5,True,16.24,16.2832,16.015,0.4031
+5020,2023-09-02,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Moon > Alfie,27.5,True,16.06,16.2832,16.015,0.4031
+5022,2023-09-03,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.48,16.6498,16.715,0.602
+5024,2023-09-03,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.55,16.6498,16.715,0.602
+5026,2023-09-03,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.59,16.6498,16.715,0.602
+5035,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,False,,15.9904,15.925,0.6132
+5037,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.05,15.9904,15.925,0.6132
+5039,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,False,,15.9904,15.925,0.6132
+5041,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.0,15.9904,15.925,0.6132
+5043,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.13,15.9904,15.925,0.6132
+5074,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,True,16.82,17.3945,17.305,0.6299
+5076,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,True,17.25,17.3945,17.305,0.6299
+5078,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,True,17.2,17.3945,17.305,0.6299
+5080,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,True,17.37,17.3945,17.305,0.6299
+5082,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,True,17.38,17.3945,17.305,0.6299
+5098,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Maggie > Alfie,27.5,True,16.0,16.3807,16.09,0.4001
+5100,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Moon > Maggie,30.0,True,16.09,16.5643,16.085,0.3801
+5102,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Cookies > Enola > Moon > Maggie,30.0,False,,16.5643,16.085,0.3801
+5115,2023-09-03,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,False,,17.0586,17.045,0.5723
+5117,2023-09-03,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,16.8,17.0586,17.045,0.5723
+5119,2023-09-03,Mistrovství České republiky,wildrunners nightfall,Nina > Falco > Gerry > Hector,25.0,True,16.83,17.0586,17.045,0.5723
+5136,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Ashley,27.5,True,17.48,17.3945,17.305,0.6299
+5138,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,False,,17.5995,17.685,0.6026
+5140,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,False,,17.5995,17.685,0.6026
+5160,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.02,15.9904,15.925,0.6132
+5161,2023-09-03,Mistrovství České republiky,wildrunners dreamers,Sunny > Alex > Tyna > Dixie,25.0,True,16.49,16.6498,16.715,0.602
+5162,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.17,15.9904,15.925,0.6132
+5163,2023-09-03,Mistrovství České republiky,wildrunners dreamers,Alex > Tyna > Dixie > Sirius,25.0,True,16.4,16.7091,16.785,0.6242
+5164,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,True,16.07,15.9904,15.925,0.6132
+5165,2023-09-03,Mistrovství České republiky,wildrunners dreamers,Alex > Tyna > Dixie > Sirius,25.0,False,,16.7091,16.785,0.6242
+5180,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,17.93,17.5995,17.685,0.6026
+5182,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,17.92,17.5995,17.685,0.6026
+5184,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,18.13,17.5995,17.685,0.6026
+5186,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,18.03,17.5995,17.685,0.6026
+5213,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,False,,15.9904,15.925,0.6132
+5215,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,False,,15.9904,15.925,0.6132
+5217,2023-09-03,Mistrovství České republiky,wildrunners hopefuls,Enola > Moon > Maggie > Alfie,27.5,False,,15.9904,15.925,0.6132
+5229,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,17.69,17.5995,17.685,0.6026
+5231,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,True,17.93,17.5995,17.685,0.6026
+5233,2023-09-03,Mistrovství České republiky,wildrunners maximini,Brooke > Bree > Sara > Bella,25.0,False,,17.5995,17.685,0.6026
+5303,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Bruno > Hector,27.5,True,17.14,17.4208,17.33,0.6279
+5305,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Bruno > Hector,27.5,True,18.85,17.4208,17.33,0.6279
+5307,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Bruno > Hector,27.5,True,17.65,17.4208,17.33,0.6279
+5339,2023-09-16,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Gordon,15.0,True,21.77,21.1129,21.91,0.5494
+5341,2023-09-16,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Gordon,15.0,True,22.33,21.1129,21.91,0.5494
+5343,2023-09-16,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Gordon,15.0,False,,21.1129,21.91,0.5494
+5368,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Bruno > Sirius,27.5,True,17.32,17.3364,17.24,0.6175
+5370,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Bruno > Sirius,27.5,False,,17.3364,17.24,0.6175
+5372,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Bruno > Sirius,27.5,True,17.47,17.3364,17.24,0.6175
+5387,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,True,15.99,16.4354,16.16,0.3939
+5389,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,True,16.11,16.4354,16.16,0.3939
+5391,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,False,,16.4354,16.16,0.3939
+5440,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Bruno > Sirius > Hector,27.5,True,17.26,17.3032,17.245,0.6007
+5442,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Bruno > Sirius > Hector,27.5,False,,17.3032,17.245,0.6007
+5444,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Bruno > Sirius > Hector,27.5,True,18.33,17.3032,17.245,0.6007
+5451,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,True,16.23,16.4354,16.16,0.3939
+5453,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,True,16.2,16.4354,16.16,0.3939
+5455,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,False,,16.4354,16.16,0.3939
+5510,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.66,16.8311,16.73,0.6006
+5512,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.73,16.8311,16.73,0.6006
+5514,2023-09-16,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.78,16.8311,16.73,0.6006
+5516,2023-09-16,Křupky na břehu,wildrunners hopefuls,Enola > Maggie > Tyna > Alfie,27.5,False,,16.0947,16.0,0.6355
+5518,2023-09-16,Křupky na břehu,wildrunners hopefuls,Enola > Maggie > Tyna > Alfie,27.5,True,16.16,16.0947,16.0,0.6355
+5520,2023-09-16,Křupky na břehu,wildrunners hopefuls,Enola > Maggie > Tyna > Alfie,27.5,False,,16.0947,16.0,0.6355
+5581,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Alfie,27.5,False,,16.3807,16.09,0.4001
+5583,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Alfie,27.5,True,15.99,16.3807,16.09,0.4001
+5585,2023-09-16,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Alfie,27.5,False,,16.3807,16.09,0.4001
+5592,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Gordon,15.0,True,21.72,21.1129,21.91,0.5494
+5594,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Gordon,15.0,True,21.58,21.1129,21.91,0.5494
+5596,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Gordon,15.0,False,,21.1129,21.91,0.5494
+5598,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Gordon,15.0,True,22.01,21.1129,21.91,0.5494
+5641,2023-09-17,Křupky na břehu,wildrunners hopefuls,Enola > Maggie > Alfie > Tyna,27.5,True,16.77,16.0946,16.0,0.6355
+5643,2023-09-17,Křupky na břehu,wildrunners hopefuls,Enola > Maggie > Alfie > Tyna,27.5,True,16.4,16.0946,16.0,0.6355
+5645,2023-09-17,Křupky na břehu,wildrunners hopefuls,Enola > Maggie > Alfie > Tyna,27.5,True,16.11,16.0946,16.0,0.6355
+5649,2023-09-17,Křupky na břehu,wildrunners hopefuls,Enola > Maggie > Alfie > Tyna,27.5,True,16.24,16.0946,16.0,0.6355
+5689,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.5,16.8311,16.73,0.6006
+5691,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.68,16.8311,16.73,0.6006
+5693,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.73,16.8311,16.73,0.6006
+5695,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.83,16.8311,16.73,0.6006
+5725,2023-09-17,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,True,15.97,16.4354,16.16,0.3939
+5727,2023-09-17,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,False,,16.4354,16.16,0.3939
+5729,2023-09-17,Křupky na břehu,wildrunners hopefuls,Cookies > Enola > Maggie > Tyna,27.5,True,16.41,16.4354,16.16,0.3939
+5736,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Dusty,27.5,False,,21.1507,21.16,0.5262
+5738,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Dusty,27.5,True,22.54,21.1507,21.16,0.5262
+5740,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Dusty,27.5,False,,21.1507,21.16,0.5262
+5742,2023-09-17,Křupky na břehu,wildrunners zephyr,Rex > Rocky > Scotty > Dusty,27.5,False,,21.1507,21.16,0.5262
+5814,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,False,,16.8311,16.73,0.6006
+5818,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,False,,16.8311,16.73,0.6006
+5820,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.61,16.8311,16.73,0.6006
+5822,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,False,,16.8311,16.73,0.6006
+5824,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,19.5,16.8311,16.73,0.6006
+5858,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,17.01,16.8311,16.73,0.6006
+5860,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,True,16.95,16.8311,16.73,0.6006
+5862,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,False,,16.8311,16.73,0.6006
+5864,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,False,,16.8311,16.73,0.6006
+5866,2023-09-17,Křupky na břehu,wildrunners dreamers,Nina > Brooke > Sirius > Hector,27.5,False,,16.8311,16.73,0.6006
+6648,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Gordon > Hector,15.0,False,,20.0073,20.925,0.5463
+6650,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Gordon > Hector,15.0,True,20.34,20.0073,20.925,0.5463
+6652,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Gordon > Hector,15.0,False,,20.0073,20.925,0.5463
+6654,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Gordon > Hector,15.0,True,20.03,20.0073,20.925,0.5463
+6671,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Speedy,25.0,False,,17.6833,17.685,0.601
+6673,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Speedy,25.0,True,17.34,17.6833,17.685,0.601
+6675,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Speedy,25.0,False,,17.6833,17.685,0.601
+6732,2023-10-14,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.52,16.2714,16.2,0.5984
+6734,2023-10-14,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,False,,16.2714,16.2,0.5984
+6736,2023-10-14,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.75,16.2714,16.2,0.5984
+6738,2023-10-14,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.82,16.2714,16.2,0.5984
+6765,2023-10-14,Budějckej xtreme,wildrunners wonders,Hank > Hector > Gordon > Ashley,15.0,False,,19.2234,20.135,0.6329
+6767,2023-10-14,Budějckej xtreme,wildrunners wonders,Hank > Hector > Gordon > Ashley,15.0,False,,19.2234,20.135,0.6329
+6769,2023-10-14,Budějckej xtreme,wildrunners wonders,Hank > Hector > Gordon > Ashley,15.0,True,19.51,19.2234,20.135,0.6329
+6771,2023-10-14,Budějckej xtreme,wildrunners wonders,Hank > Hector > Gordon > Ashley,15.0,False,,19.2234,20.135,0.6329
+6780,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Alex > Bella,25.0,True,17.3,17.2573,17.305,0.6347
+6782,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Alex > Bella,25.0,True,17.71,17.2573,17.305,0.6347
+6784,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Alex > Bella,25.0,True,17.69,17.2573,17.305,0.6347
+6848,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Alfie > Tyna,27.5,False,,16.4515,16.18,0.3921
+6850,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Alfie > Tyna,27.5,False,,16.4515,16.18,0.3921
+6852,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Alfie > Tyna,27.5,True,15.79,16.4515,16.18,0.3921
+6854,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Alfie > Tyna,27.5,False,,16.4515,16.18,0.3921
+6864,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Ted,27.5,True,17.91,18.8181,18.715,0.4038
+6866,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Ted,27.5,False,,18.8181,18.715,0.4038
+6868,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Ted,27.5,False,,18.8181,18.715,0.4038
+6870,2023-10-14,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Ted,27.5,False,,18.8181,18.715,0.4038
+6885,2023-10-14,Budějckej xtreme,wildrunners maximini,Alex > Brooke > Bree > Speedy,25.0,False,,17.7937,17.875,0.6429
+6887,2023-10-14,Budějckej xtreme,wildrunners maximini,Alex > Brooke > Bree > Speedy,25.0,True,17.57,17.7937,17.875,0.6429
+6889,2023-10-14,Budějckej xtreme,wildrunners maximini,Alex > Brooke > Bree > Speedy,25.0,True,17.43,17.7937,17.875,0.6429
+6936,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.86,16.9432,16.855,0.6352
+6938,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.83,16.9432,16.855,0.6352
+6940,2023-10-14,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,False,,16.9432,16.855,0.6352
+6966,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,True,15.53,16.5581,16.29,0.3775
+6968,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,True,15.84,16.5581,16.29,0.3775
+6970,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,False,,16.5581,16.29,0.3775
+6972,2023-10-14,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,True,15.75,16.5581,16.29,0.3775
+7003,2023-10-15,Budějckej xtreme,wildrunners wonders,Hank > Hector > Gordon > Ashley,15.0,False,,19.2234,20.135,0.6329
+7005,2023-10-15,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Gordon,15.0,True,19.63,20.0068,20.925,0.5463
+7007,2023-10-15,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Gordon,15.0,True,19.55,20.0068,20.925,0.5463
+7009,2023-10-15,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Gordon,15.0,True,19.87,20.0068,20.925,0.5463
+7062,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,False,,16.2714,16.2,0.5984
+7064,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.58,16.2714,16.2,0.5984
+7066,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.68,16.2714,16.2,0.5984
+7068,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.93,16.2714,16.2,0.5984
+7174,2023-10-15,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,False,,16.5581,16.29,0.3775
+7176,2023-10-15,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,False,,16.5581,16.29,0.3775
+7178,2023-10-15,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,True,15.62,16.5581,16.29,0.3775
+7180,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,False,,16.9432,16.855,0.6352
+7182,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.61,16.9432,16.855,0.6352
+7184,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,False,,16.9432,16.855,0.6352
+7186,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.54,16.9432,16.855,0.6352
+7188,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.68,16.9432,16.855,0.6352
+7210,2023-10-15,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Gordon,15.0,False,,20.0068,20.925,0.5463
+7212,2023-10-15,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Gordon,15.0,False,,20.0068,20.925,0.5463
+7214,2023-10-15,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Gordon,15.0,False,,20.0068,20.925,0.5463
+7216,2023-10-15,Budějckej xtreme,wildrunners wonders,Rex > Hank > Hector > Gordon,15.0,False,,20.0068,20.925,0.5463
+7247,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.79,16.2714,16.2,0.5984
+7249,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.96,16.2714,16.2,0.5984
+7251,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.84,16.2714,16.2,0.5984
+7310,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.74,16.2714,16.2,0.5984
+7312,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.77,16.2714,16.2,0.5984
+7314,2023-10-15,Budějckej xtreme,wildrunners dreamers,Maggie > Sirius > Alfie > Tyna,27.5,True,15.85,16.2714,16.2,0.5984
+7316,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.53,16.9432,16.855,0.6352
+7318,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.64,16.9432,16.855,0.6352
+7320,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.74,16.9432,16.855,0.6352
+7345,2023-10-15,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,False,,16.5581,16.29,0.3775
+7347,2023-10-15,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,True,15.85,16.5581,16.29,0.3775
+7349,2023-10-15,Budějckej xtreme,wildrunners dreamers,Cookies > Maggie > Sirius > Alfie,27.5,False,,16.5581,16.29,0.3775
+7372,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.59,16.9432,16.855,0.6352
+7374,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.64,16.9432,16.855,0.6352
+7376,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,False,,16.9432,16.855,0.6352
+7378,2023-10-15,Budějckej xtreme,wildrunners maximini,Nina > Brooke > Bree > Alex,27.5,True,16.77,16.9432,16.855,0.6352

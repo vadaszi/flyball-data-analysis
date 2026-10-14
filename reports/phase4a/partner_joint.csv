@@ -1,0 +1,11 @@
+spec,outcome,passes,chi2,df,p_value,p_holm
+category,"pass time (racing passes, <= 1 s)",2763,2.8365,3,0.4175,1.0
+category,held-pass rate (> 1 s),2902,8.2134,3,0.0418,0.209
+category,tight-pass (ok) share,3260,5.3798,3,0.146,0.584
+category,early-pass rate,3260,1.7918,3,0.6167,1.0
+category,run time of the outgoing dog,3187,0.2355,3,0.9717,1.0
+"category, adjusted for age and team","pass time (racing passes, <= 1 s)",2763,1.8573,3,0.6026,1.0
+"category, adjusted for age and team",held-pass rate (> 1 s),2902,7.9935,3,0.0461,0.2307
+"category, adjusted for age and team",tight-pass (ok) share,3260,5.6304,3,0.131,0.5242
+"category, adjusted for age and team",early-pass rate,3260,1.0727,3,0.7837,1.0
+"category, adjusted for age and team",run time of the outgoing dog,3187,1.0963,3,0.778,1.0

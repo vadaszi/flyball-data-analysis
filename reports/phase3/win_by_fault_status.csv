@@ -1,0 +1,5 @@
+own,opp,team_heats,win_rate,ci_low,ci_high
+own clean,opponent clean,3532,0.4929,0.4765,0.5094
+own clean,opponent fault,1944,0.8498,0.8332,0.865
+own fault,opponent clean,1944,0.089,0.0771,0.1025
+own fault,opponent fault,956,0.1914,0.1677,0.2176

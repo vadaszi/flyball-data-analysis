@@ -1,0 +1,5 @@
+incoming_category,passes,incoming_dogs,outgoing_dogs,incoming_age_median_y,median_pass_s,held_pass_rate,ok_share,early_passes,early_pass_rate,outgoing_median_run_s,early_ci_low,early_ci_high
+neutered male,1167,19,39,5.6583,0.22,0.0595,0.2476,107,0.0917,4.48,0.0764,0.1096
+neutered female,1365,17,38,4.825,0.17,0.0297,0.3121,134,0.0982,4.2,0.0835,0.1151
+intact male,515,8,26,1.9083,0.26,0.0804,0.1922,30,0.0583,4.52,0.0411,0.0819
+intact female,213,2,11,2.3,0.12,0.0215,0.4319,25,0.1174,4.12,0.0808,0.1675

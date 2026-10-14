@@ -1,0 +1,5 @@
+sample,model,runs,dogs,median_run_s,pct,seconds,ci_low_s,ci_high_s,p_value,p_tost,verdict
+field,mixed,32777,903,4.27,0.1525,0.0065,0.0034,0.0096,0.0,0.0,real but negligible
+field,within dog-day,32777,903,4.27,0.1509,0.0064,0.0028,0.0101,0.0006,0.0,real but negligible
+WRFT,mixed,4340,50,4.28,0.0785,0.0034,-0.0062,0.013,0.4926,0.0,no effect (equivalent)
+WRFT,within dog-day,4340,50,4.28,0.1398,0.006,-0.0061,0.0181,0.3322,0.0,no effect (equivalent)

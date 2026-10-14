@@ -1,0 +1,3 @@
+features,runs,folds,run_r2,ring_days,day_r2,day_corr,sd_run_pct,sd_day_pct
+weather + fatigue,32777,11,0.0105,28,-0.0566,0.3847,3.3669,0.5473
+fatigue only,32777,11,0.0105,28,-0.2077,-0.4375,3.3669,0.5473

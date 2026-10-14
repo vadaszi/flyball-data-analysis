@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>{{ meta.title }}</title>
+<style>
+@font-face { font-family: "Source Sans 3"; font-weight: 400; src: url("{{ static }}/fonts/SourceSans3-Regular.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 600; src: url("{{ static }}/fonts/SourceSans3-Semibold.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 700; src: url("{{ static }}/fonts/SourceSans3-Bold.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-style: italic; src: url("{{ static }}/fonts/SourceSans3-It.ttf"); }
+{% include "deck.css" %}
+</style>
+</head>
+<body>
+{% macro header(s) %}
+  <header class="head{% if s.strip %} has-strip{% endif %}">
+    {% if s.kicker %}<div class="kicker">{{ s.kicker }}</div>{% endif %}
+    <h1>{{ s.title }}</h1>
+    {% if s.lead %}<p class="lead">{{ s.lead }}</p>{% endif %}
+  </header>
+  {% if s.strip %}
+  <aside class="strip">
+    <div class="strip-label">Hol áll ez a lehetőség a rangsorban?</div>
+    <img src="{{ fig(strip_name[s.strip]) }}" alt="">
+  </aside>
+  {% endif %}
+{% endmacro %}
+
+{% macro bullets(items, cls="") %}
+  {% if items %}<ul class="bullets {{ cls }}">{% for b in items %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+{% endmacro %}
+
+{% macro table(t) %}
+  <table class="data{% if t.small %} small{% endif %}">
+    <thead><tr>{% for c in t.columns %}<th class="{{ t.align[loop.index0] }}">{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for r in t.rows %}
+      <tr{% if t.emphasis_last and loop.revindex <= t.emphasis_last %} class="emph"{% endif %}>
+        {% for c in r %}<td class="{{ t.align[loop.index0] }}">{{ c }}</td>{% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% if t.footnote %}<p class="footnote">{{ t.footnote }}</p>{% endif %}
+{% endmacro %}
+
+{% macro footer(s) %}
+  <footer class="foot">
+    <span>{{ meta.footer }}{% if s.part == "appendix" %} · függelék{% endif %} · {{ meta.ci_note }}</span>
+    <span>{{ s.no }}{% if s.time %} · {{ s.time }}{% endif %}</span>
+  </footer>
+{% endmacro %}
+
+{% for s in slides %}
+<section class="slide layout-{{ s.layout }} part-{{ s.part }}" id="{{ s.id }}">
+{% if s.layout == "cover" %}
+  <div class="cover-band"></div>
+  <div class="cover-body">
+    <div class="kicker">{{ meta.short_title }}</div>
+    <h1>{{ s.title }}</h1>
+    <p class="lead">{{ s.lead }}</p>
+    {% if s.stats %}
+    <div class="cover-stats">
+      {% for v, label, sub in s.stats %}<div class="stat"><div class="stat-value">{{ v }}</div>
+        <div class="stat-label">{{ label }}</div><div class="stat-sub">{{ sub }}</div></div>{% endfor %}
+    </div>
+    {% endif %}
+    <p class="cover-meta">{{ meta.subtitle }}<br>{{ meta.audience }} · {{ meta.date }}</p>
+  </div>
+
+{% elif s.layout == "divider" %}
+  <div class="divider-body">
+    <h1>{{ s.title }}</h1>
+    <p class="lead">{{ s.lead }}</p>
+  </div>
+  {{ footer(s) }}
+
+{% elif s.layout == "summary" %}
+  {{ header(s) }}
+  <div class="cards">
+    {% for c in s.cards %}
+    <div class="card">
+      <div class="card-tag tag-{{ c.tag|replace(' ', '-') }}">{{ c.tag }}</div>
+      <div class="card-value">{{ c.value }}</div>
+      <div class="card-unit">{{ c.unit }}</div>
+      <div class="card-name">{{ c.name }}</div>
+      <p>{{ c.text }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <dl class="answers">
+    {% for a in s.answers %}<dt>{{ a.q }}</dt><dd>{{ a.a }}</dd>{% endfor %}
+  </dl>
+  {{ footer(s) }}
+
+{% elif s.layout == "chart" %}
+  {{ header(s) }}
+  <figure class="main-figure{% if s.bullets %} with-bullets{% endif %}">
+    <img src="{{ fig(s.figure) }}" alt="">
+    {% if s.caption %}<figcaption>{{ s.caption }}</figcaption>{% endif %}
+  </figure>
+  {{ bullets(s.bullets, "row") }}
+  {{ footer(s) }}
+
+{% elif s.layout == "chart_side" %}
+  {{ header(s) }}
+  <div class="side">
+    <figure class="side-figure">
+      <img src="{{ fig(s.figure) }}" alt="">
+      {% if s.caption %}<figcaption>{{ s.caption }}</figcaption>{% endif %}
+    </figure>
+    <div class="side-text">
+      {% if s.table %}{{ table(s.table) }}{% endif %}
+      {% if s.verdict %}
+      <table class="verdict">
+        {% for v in s.verdict %}
+        <tr class="v-{{ v.status }}"><td class="v-icon">{{ "▲" if v.status == "yes" else "●" }}</td>
+          <th>{{ v.factor }}</th><td>{{ v.verdict }}<br><span class="v-effect">{{ v.effect }}</span></td></tr>
+        {% endfor %}
+      </table>
+      {% endif %}
+      {{ bullets(s.bullets) }}
+    </div>
+  </div>
+  {{ footer(s) }}
+
+{% elif s.layout == "two_charts" %}
+  {{ header(s) }}
+  <div class="two{% if s.bullets or s.table %} with-bullets{% endif %}">
+    <figure><img src="{{ fig(s.figure) }}" alt="">{% if s.caption %}<figcaption>{{ s.caption }}</figcaption>{% endif %}
+      {% if s.bullets2 %}{{ bullets(s.bullets, "col") }}{% endif %}</figure>
+    <figure><img src="{{ fig(s.figure2) }}" alt="">{% if s.caption2 %}<figcaption>{{ s.caption2 }}</figcaption>{% endif %}
+      {% if s.bullets2 %}{{ bullets(s.bullets2, "col") }}{% endif %}</figure>
+  </div>
+  {% if s.table %}<div class="below-table">{{ table(s.table) }}</div>{% endif %}
+  {% if not s.bullets2 %}{{ bullets(s.bullets, "row") }}{% endif %}
+  {{ footer(s) }}
+
+{% elif s.layout == "lineup_cards" %}
+  {{ header(s) }}
+  <div class="lineups">
+    {% for t in s.table.teams %}
+    <div class="lineup">
+      <div class="lineup-head"><span class="lineup-team">{{ t.team }}</span>
+        <span class="lineup-gain">−{{ t.gain }} / futam</span></div>
+      <div class="order-label">most</div>
+      <ol class="order now">{% for d in t.now %}<li>{{ d }}</li>{% endfor %}</ol>
+      <div class="order-label">javasolt</div>
+      <ol class="order best">{% for d in t.best %}<li{% if loop.first and t.starter_changed %} class="moved"{% endif %}>{{ d }}</li>{% endfor %}</ol>
+      <div class="lineup-wins"><b>{{ t.wins }}</b> plusz győzelem / szezon <span class="muted">({{ t.ci }})</span></div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="optimal">Már most is (majdnem) a legjobb sorrendben fut: {{ s.table.optimal|join(", ") }}.</p>
+  {{ bullets(s.bullets, "row") }}
+  {{ footer(s) }}
+
+{% elif s.layout == "ateam" %}
+  {{ header(s) }}
+  <div class="ateam">
+    <div class="ateam-left">
+      <div class="ateam-card">
+        <div class="ateam-title">A legjobb négyes · {{ s.table.hurdle }}-es akadály</div>
+        <div class="tiles">
+        {% for d in s.table.tiles %}
+          <div class="tile"><div class="tile-role">{{ d.role }}</div><div class="tile-dog">{{ d.dog }}</div>
+            <div class="tile-run">{{ d.run }}</div><div class="tile-line">{{ d.line }}</div>
+            <div class="tile-line">futási hiba {{ d.run_fault }} · {{ d.height }}</div></div>
+        {% endfor %}
+        </div>
+      </div>
+      {{ bullets(s.bullets) }}
+    </div>
+    <div class="ateam-right">
+      <figure><figcaption class="above">Milyen gyakran kerül be a legjobb négyesbe (véletlenszerű újraszámolások)</figcaption>
+        <img src="{{ fig('stability') }}" alt=""></figure>
+      <figure><figcaption class="above">Megéri-e egy kis „magasságadó” kutya?</figcaption><img src="{{ fig('height_dog') }}" alt=""></figure>
+    </div>
+  </div>
+  {{ footer(s) }}
+
+{% elif s.layout == "table" %}
+  {{ header(s) }}
+  <div class="table-wrap">{{ table(s.table) }}</div>
+  {{ bullets(s.bullets, "row") }}
+  {{ footer(s) }}
+
+{% elif s.layout == "actions" %}
+  {{ header(s) }}
+  <table class="data actions">
+    <thead><tr><th class="r">#</th><th class="l">Teendő</th><th class="l">Ki</th><th class="l">Mikor</th>
+      <th class="l">Mivel mérjük</th><th class="l">2023 → cél</th></tr></thead>
+    <tbody>
+    {% for a in s.actions %}
+      <tr><td class="r num">{{ loop.index }}</td><td class="l what">{{ a.what }}</td><td class="l">{{ a.who }}</td>
+        <td class="l"><span class="pill tag-{{ a.tag|replace(' ', '-') }}">{{ a.when }}</span></td>
+        <td class="l">{{ a.kpi }}</td><td class="l">{{ a.target }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {{ footer(s) }}
+
+{% elif s.layout == "text" %}
+  {{ header(s) }}
+  {{ bullets(s.bullets, "text") }}
+  {{ footer(s) }}
+
+{% elif s.layout == "glossary" %}
+  {{ header(s) }}
+  <dl class="glossary">
+    {% for g in glossary %}<div><dt>{{ g.term }}</dt><dd>{{ g.text }}</dd></div>{% endfor %}
+  </dl>
+  {{ footer(s) }}
+{% endif %}
+</section>
+{% endfor %}
+</body>
+</html>

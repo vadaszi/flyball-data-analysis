@@ -1,0 +1,5 @@
+factor,speed,reliability,field_run_effect,field_meaningful,wrft_meaningful
+temperature,supported,inconclusive,temperature +10 °C (below 20 °C): +0.003 s/run (-0.007 to +0.013); temperature +10 °C (above 20 °C): +0.083 s/run (+0.050 to +0.117),"run time, temperature +10 °C (above 20 °C); clean heat time, temperature +10 °C (above 20 °C)",
+humidity,refuted (too small to matter),inconclusive,humidity +20 pp: +0.018 s/run (+0.007 to +0.030),,"early-pass rate, humidity +20 pp"
+wind,refuted (too small to matter),inconclusive,wind +3 m/s: -0.007 s/run (-0.019 to +0.005),,
+rain,refuted (too small to matter),inconclusive,rain in the last 3 h: -0.005 s/run (-0.014 to +0.003),,

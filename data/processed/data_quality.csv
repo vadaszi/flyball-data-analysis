@@ -1,0 +1,36 @@
+check,n,unit,expected,note
+rows,8571,rows,8571,
+wrft_rows,1128,rows,1128,
+rows_realigned,19,rows,19,Step 1.4
+heats_paired,4235,heats,,
+rows_unpaired,101,rows,,opponent row missing or practice
+paired_heats_same_lane,0,heats,0,
+paired_heats_both_win,0,heats,0,
+paired_heats_both_loss,439,heats,,allowed: both teams can lose (UKFL 8.11.M)
+red_font_mismatch_cells,1,non-empty cells,0,
+identity_rows,6286,rows,6286,
+identity_holds,5588,rows,~87.7%,88.9% within ±0.04 s
+rerun_time_negative,2,rows,,total smaller than its parts
+is_practice,28,rows,,
+is_zero_total,17,rows,,
+no_outcome,107,rows,,
+has_placeholder_dog0,14,rows,,
+is_complete,7670,rows,,
+is_clean_heat,5242,rows,,
+run_fault,540,dog slots,,
+pass_fault,3140,dog slots,,
+run_too_fast,16,dog slots,,
+run_over_ceiling,23,dog slots,,
+run_dog_outlier,249,dog slots,,
+pass_over_ceiling,213,dog slots,,
+valid_speed,32967,dog slots,,
+valid_pass,29809,dog slots,,
+is_placeholder_dog0,14,dog slots,,
+wrft_dogs_found,50,dogs,50,
+wrft_unknown_names,0,dog slots,0,
+master_dogs_never_ran,1,dogs,1,Fibo
+wrft_hurdle_mismatch,204,rows,0,"higher than expected: 92, lower: 112"
+wrft_hurdle_missing,0,rows,0,
+wrft_dog_under_18_months,2,dogs,0,"Hank: 11.7-17.4 mo, 166 slots; Bonnie: 13.5-15.8 mo, 105 slots"
+wrft_dog_two_teams_same_day,2,dog-days,,report only
+wrft_dog_twice_in_one_row,0,rows,0,

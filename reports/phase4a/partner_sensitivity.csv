@@ -1,0 +1,51 @@
+outcome,term,estimate,se,ci_low,ci_high,p_value,unit,level,p_tost,passes,variant,scale,joint_p
+"pass time (racing passes, <= 1 s)",C(incoming_sex)[T.male],0.0162,0.0178,-0.0187,0.0511,0.3624,s,male,0.4158,2763,merged: sex only,difference,0.3624
+held-pass rate (> 1 s),C(incoming_sex)[T.male],0.0115,0.0264,-0.0402,0.0632,0.663,share,male,0.3738,2902,merged: sex only,difference,0.663
+tight-pass (ok) share,C(incoming_sex)[T.male],-0.0437,0.0238,-0.0903,0.0029,0.0662,share,male,0.8403,3260,merged: sex only,difference,0.0662
+early-pass rate,C(incoming_sex)[T.male],-0.0097,0.0162,-0.0414,0.0219,0.5468,share,male,0.2628,3260,merged: sex only,difference,0.5468
+run time of the outgoing dog,C(incoming_sex)[T.male],0.0018,0.0229,-0.043,0.0466,0.9366,s,male,0.0175,3187,merged: sex only,difference,0.9366
+"pass time (racing passes, <= 1 s)",C(incoming_status)[T.neutered],-0.0047,0.0218,-0.0475,0.0381,0.8299,s,neutered,0.2415,2763,merged: neutered only,difference,0.8299
+held-pass rate (> 1 s),C(incoming_status)[T.neutered],-0.0646,0.0313,-0.126,-0.0033,0.0388,share,neutered,0.9232,2902,merged: neutered only,difference,0.0388
+tight-pass (ok) share,C(incoming_status)[T.neutered],0.008,0.0277,-0.0464,0.0624,0.7729,share,neutered,0.3328,3260,merged: neutered only,difference,0.7729
+early-pass rate,C(incoming_status)[T.neutered],0.0125,0.0187,-0.0241,0.0491,0.503,share,neutered,0.344,3260,merged: neutered only,difference,0.503
+run time of the outgoing dog,C(incoming_status)[T.neutered],-0.0105,0.0275,-0.0644,0.0434,0.7024,s,neutered,0.0753,3187,merged: neutered only,difference,0.7024
+"pass time (racing passes, <= 1 s)",C(incoming)[T.neutered female],-0.0036,0.0202,-0.0432,0.036,0.858,s,neutered female,0.2085,2581,intact females left out,difference,0.5415
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact male],0.0261,0.0271,-0.027,0.0791,0.3353,s,intact male,0.5888,2581,intact females left out,difference,0.5415
+held-pass rate (> 1 s),C(incoming)[T.neutered female],0.0185,0.0286,-0.0377,0.0746,0.5188,share,neutered female,0.4789,2716,intact females left out,difference,0.0228
+held-pass rate (> 1 s),C(incoming)[T.intact male],0.106,0.0389,0.0297,0.1823,0.0065,share,intact male,0.9864,2716,intact females left out,difference,0.0228
+tight-pass (ok) share,C(incoming)[T.neutered female],0.0209,0.0268,-0.0317,0.0734,0.4362,share,neutered female,0.5131,3047,intact females left out,difference,0.2254
+tight-pass (ok) share,C(incoming)[T.intact male],-0.0415,0.0354,-0.1109,0.028,0.2419,share,intact male,0.7276,3047,intact females left out,difference,0.2254
+early-pass rate,C(incoming)[T.neutered female],-0.0045,0.0194,-0.0425,0.0336,0.818,share,neutered female,0.2119,3047,intact females left out,difference,0.5552
+early-pass rate,C(incoming)[T.intact male],-0.0271,0.0253,-0.0768,0.0225,0.2836,share,intact male,0.6112,3047,intact females left out,difference,0.5552
+run time of the outgoing dog,C(incoming)[T.neutered female],-0.0037,0.0262,-0.0551,0.0476,0.8868,s,neutered female,0.0388,2975,intact females left out,difference,0.8407
+run time of the outgoing dog,C(incoming)[T.intact male],0.0165,0.0343,-0.0508,0.0838,0.6307,s,intact male,0.1645,2975,intact females left out,difference,0.8407
+"pass time (racing passes, <= 1 s)",C(incoming)[T.neutered female],-0.0103,0.0189,-0.0472,0.0267,0.5868,s,neutered female,0.3028,2366,dogs under 18 months left out,difference,0.7443
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact male],0.0022,0.0283,-0.0532,0.0577,0.9369,s,intact male,0.2652,2366,dogs under 18 months left out,difference,0.7443
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact female],-0.0507,0.0502,-0.1491,0.0478,0.3131,s,intact female,0.7292,2366,dogs under 18 months left out,difference,0.7443
+held-pass rate (> 1 s),C(incoming)[T.neutered female],0.0248,0.03,-0.034,0.0835,0.4087,share,neutered female,0.5631,2480,dogs under 18 months left out,difference,0.0123
+held-pass rate (> 1 s),C(incoming)[T.intact male],0.1407,0.044,0.0544,0.227,0.0014,share,intact male,0.9969,2480,dogs under 18 months left out,difference,0.0123
+held-pass rate (> 1 s),C(incoming)[T.intact female],-0.0416,0.0853,-0.2089,0.1256,0.6257,share,intact female,0.6,2480,dogs under 18 months left out,difference,0.0123
+tight-pass (ok) share,C(incoming)[T.neutered female],0.0233,0.0274,-0.0303,0.077,0.3942,share,neutered female,0.5483,2780,dogs under 18 months left out,difference,0.3142
+tight-pass (ok) share,C(incoming)[T.intact male],-0.042,0.0413,-0.123,0.0389,0.3087,share,intact male,0.7032,2780,dogs under 18 months left out,difference,0.3142
+tight-pass (ok) share,C(incoming)[T.intact female],0.0776,0.0678,-0.0552,0.2105,0.2519,share,intact female,0.8025,2780,dogs under 18 months left out,difference,0.3142
+early-pass rate,C(incoming)[T.neutered female],-0.0111,0.0219,-0.054,0.0318,0.6128,share,neutered female,0.3419,2780,dogs under 18 months left out,difference,0.8199
+early-pass rate,C(incoming)[T.intact male],-0.0281,0.0315,-0.0899,0.0337,0.3722,share,intact male,0.6018,2780,dogs under 18 months left out,difference,0.8199
+early-pass rate,C(incoming)[T.intact female],-0.0239,0.0574,-0.1365,0.0886,0.677,share,intact female,0.5272,2780,dogs under 18 months left out,difference,0.8199
+run time of the outgoing dog,C(incoming)[T.neutered female],0.0071,0.0317,-0.055,0.0693,0.8218,s,neutered female,0.0884,2717,dogs under 18 months left out,difference,0.9439
+run time of the outgoing dog,C(incoming)[T.intact male],0.0249,0.0439,-0.0611,0.1108,0.5705,s,intact male,0.2834,2717,dogs under 18 months left out,difference,0.9439
+run time of the outgoing dog,C(incoming)[T.intact female],0.0287,0.0932,-0.154,0.2114,0.7582,s,intact female,0.4096,2717,dogs under 18 months left out,difference,0.9439
+"pass time (racing passes, <= 1 s)",C(incoming)[T.neutered female],0.0433,0.0721,-0.098,0.1845,0.5484,s,neutered female,0.6265,2902,pass time with held passes included,difference,0.0485
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact male],0.2575,0.0974,0.0667,0.4484,0.0082,s,intact male,0.9926,2902,pass time with held passes included,difference,0.0485
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact female],-0.0771,0.1544,-0.3797,0.2256,0.6178,s,intact female,0.6441,2902,pass time with held passes included,difference,0.0485
+"pass time (racing passes, <= 1 s)",C(incoming)[T.neutered female],-0.0051,0.0205,-0.0452,0.035,0.8029,s,neutered female,0.2332,2763,ok pass counted as 0 s,difference,0.3988
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact male],0.0244,0.0274,-0.0293,0.0781,0.3728,s,intact male,0.5641,2763,ok pass counted as 0 s,difference,0.3988
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact female],-0.0535,0.041,-0.1339,0.0268,0.1916,s,intact female,0.7934,2763,ok pass counted as 0 s,difference,0.3988
+"pass time (racing passes, <= 1 s)",C(incoming)[T.neutered female],-0.0024,0.0197,-0.041,0.0361,0.9015,s,neutered female,0.186,2763,ok pass counted as 0.08 s,difference,0.4381
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact male],0.024,0.0264,-0.0278,0.0758,0.3629,s,intact male,0.5608,2763,ok pass counted as 0.08 s,difference,0.4381
+"pass time (racing passes, <= 1 s)",C(incoming)[T.intact female],-0.0486,0.0399,-0.1268,0.0295,0.2226,s,intact female,0.7636,2763,ok pass counted as 0.08 s,difference,0.4381
+tight-pass (ok) share,C(incoming)[T.neutered female],1.1392,,0.8803,1.4742,0.3219,,neutered female,,3260,logistic GEE (odds ratio),odds ratio,0.1393
+tight-pass (ok) share,C(incoming)[T.intact male],0.8622,,0.6305,1.1792,0.3535,,intact male,,3260,logistic GEE (odds ratio),odds ratio,0.1393
+tight-pass (ok) share,C(incoming)[T.intact female],1.3687,,0.8672,2.1603,0.1776,,intact female,,3260,logistic GEE (odds ratio),odds ratio,0.1393
+early-pass rate,C(incoming)[T.neutered female],0.9084,,0.6059,1.3619,0.642,,neutered female,,3260,logistic GEE (odds ratio),odds ratio,0.1506
+early-pass rate,C(incoming)[T.intact male],0.6855,,0.4378,1.0733,0.0988,,intact male,,3260,logistic GEE (odds ratio),odds ratio,0.1506
+early-pass rate,C(incoming)[T.intact female],1.276,,0.6875,2.3685,0.4398,,intact female,,3260,logistic GEE (odds ratio),odds ratio,0.1506

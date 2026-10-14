@@ -1,0 +1,26 @@
+outcome,term,estimate,se,ci_low,ci_high,p_value,unit,level,p_tost,passes,interaction,joint_p,p_holm
+"pass time (racing passes, <= 1 s)",C(incoming_sex)[T.male]:C(own_sex)[T.male],-0.0108,0.0195,-0.049,0.0274,0.579,s,male]:C(own_sex)[T.male,0.3186,2763,sex x sex,0.579,1.0
+held-pass rate (> 1 s),C(incoming_sex)[T.male]:C(own_sex)[T.male],0.0134,0.0209,-0.0276,0.0543,0.5222,share,male]:C(own_sex)[T.male,0.3755,2902,sex x sex,0.5222,1.0
+tight-pass (ok) share,C(incoming_sex)[T.male]:C(own_sex)[T.male],-0.003,0.0392,-0.0798,0.0737,0.9381,share,male]:C(own_sex)[T.male,0.3325,3260,sex x sex,0.9381,1.0
+early-pass rate,C(incoming_sex)[T.male]:C(own_sex)[T.male],0.0414,0.0245,-0.0067,0.0895,0.0915,share,male]:C(own_sex)[T.male,0.8085,3260,sex x sex,0.0915,0.4573
+run time of the outgoing dog,C(incoming_sex)[T.male]:C(own_sex)[T.male],0.0269,0.0163,-0.005,0.0589,0.0984,s,male]:C(own_sex)[T.male,0.0786,3187,sex x sex,0.0984,0.4573
+"pass time (racing passes, <= 1 s)",C(incoming_status)[T.neutered]:C(own_status)[T.neutered],0.105,0.0306,0.0451,0.1649,0.0006,s,neutered]:C(own_status)[T.neutered,0.9973,2763,neutered x neutered,0.0006,0.003
+held-pass rate (> 1 s),C(incoming_status)[T.neutered]:C(own_status)[T.neutered],0.0169,0.0326,-0.047,0.0808,0.6041,share,neutered]:C(own_status)[T.neutered,0.462,2902,neutered x neutered,0.6041,1.0
+tight-pass (ok) share,C(incoming_status)[T.neutered]:C(own_status)[T.neutered],0.0158,0.0616,-0.1049,0.1366,0.7971,share,neutered]:C(own_status)[T.neutered,0.4731,3260,neutered x neutered,0.7971,1.0
+early-pass rate,C(incoming_status)[T.neutered]:C(own_status)[T.neutered],-0.0096,0.0399,-0.0879,0.0686,0.8098,share,neutered]:C(own_status)[T.neutered,0.3973,3260,neutered x neutered,0.8098,1.0
+run time of the outgoing dog,C(incoming_status)[T.neutered]:C(own_status)[T.neutered],-0.005,0.0243,-0.0527,0.0427,0.8386,s,neutered]:C(own_status)[T.neutered,0.0321,3187,neutered x neutered,0.8386,1.0
+"pass time (racing passes, <= 1 s)",C(pair)[T.neutered->intact],-0.0385,0.0383,-0.1135,0.0366,0.3149,s,neutered->intact,0.6854,2763,neutered/intact pairing cells,0.0068,1.0
+"pass time (racing passes, <= 1 s)",C(pair)[T.intact->neutered],-0.0132,0.0222,-0.0568,0.0303,0.5514,s,intact->neutered,0.3805,2763,neutered/intact pairing cells,0.0068,1.0
+"pass time (racing passes, <= 1 s)",C(pair)[T.intact->intact],0.0533,0.0493,-0.0433,0.1498,0.2798,s,intact->intact,0.7501,2763,neutered/intact pairing cells,0.0068,1.0
+held-pass rate (> 1 s),C(pair)[T.neutered->intact],0.0923,0.0538,-0.0132,0.1978,0.0864,share,neutered->intact,0.9104,2902,neutered/intact pairing cells,0.0608,1.0
+held-pass rate (> 1 s),C(pair)[T.intact->neutered],0.0626,0.0329,-0.0019,0.127,0.057,share,intact->neutered,0.9023,2902,neutered/intact pairing cells,0.0608,0.7406
+held-pass rate (> 1 s),C(pair)[T.intact->intact],0.1717,0.0669,0.0407,0.3028,0.0102,share,intact->intact,0.9884,2902,neutered/intact pairing cells,0.0608,0.1531
+tight-pass (ok) share,C(pair)[T.neutered->intact],0.0006,0.043,-0.0837,0.085,0.9884,share,neutered->intact,0.3263,3260,neutered/intact pairing cells,0.9949,1.0
+tight-pass (ok) share,C(pair)[T.intact->neutered],-0.0029,0.0291,-0.0598,0.0541,0.9218,share,intact->neutered,0.2777,3260,neutered/intact pairing cells,0.9949,1.0
+tight-pass (ok) share,C(pair)[T.intact->intact],0.0136,0.0664,-0.1164,0.1437,0.8375,share,intact->intact,0.4616,3260,neutered/intact pairing cells,0.9949,1.0
+early-pass rate,C(pair)[T.neutered->intact],0.0495,0.0197,0.0108,0.0882,0.0121,share,neutered->intact,0.9326,3260,neutered/intact pairing cells,0.066,0.1696
+early-pass rate,C(pair)[T.intact->neutered],-0.0106,0.0212,-0.0521,0.0309,0.6168,share,intact->neutered,0.3284,3260,neutered/intact pairing cells,0.066,1.0
+early-pass rate,C(pair)[T.intact->intact],0.0293,0.0393,-0.0478,0.1064,0.4565,share,intact->intact,0.5934,3260,neutered/intact pairing cells,0.066,1.0
+run time of the outgoing dog,C(pair)[T.neutered->intact],-0.0964,0.2031,-0.4945,0.3016,0.6349,s,neutered->intact,0.5905,3187,neutered/intact pairing cells,0.939,1.0
+run time of the outgoing dog,C(pair)[T.intact->neutered],0.0114,0.0288,-0.0451,0.0679,0.6932,s,intact->neutered,0.0902,3187,neutered/intact pairing cells,0.939,1.0
+run time of the outgoing dog,C(pair)[T.intact->intact],-0.09,0.2056,-0.493,0.3129,0.6615,s,intact->intact,0.5772,3187,neutered/intact pairing cells,0.939,1.0

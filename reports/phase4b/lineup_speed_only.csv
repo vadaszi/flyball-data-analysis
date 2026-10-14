@@ -1,0 +1,11 @@
+rank,dog1,dog2,dog3,dog4,line_up,expected_s,no_fault_s,start_s,runs_s,passes_s,fault_s,p_clean,hurdle_cm
+1,Maggie,Alfie,Pax,Moon,Maggie > Alfie > Pax > Moon,16.4758,16.4758,0.0986,15.905,0.4722,0.0,0.6534,25.0
+2,Enola,Alfie,Pax,Moon,Enola > Alfie > Pax > Moon,16.4958,16.4958,0.1338,15.8898,0.4722,0.0,0.6365,25.0
+3,Enola,Maggie,Pax,Moon,Enola > Maggie > Pax > Moon,16.525,16.525,0.1338,15.9187,0.4725,0.0,0.6205,25.0
+4,Pax,Alfie,Tyna,Moon,Pax > Alfie > Tyna > Moon,16.5317,16.5317,0.1129,15.9517,0.467,0.0,0.64,25.0
+5,Enola,Maggie,Pax,Alfie,Enola > Maggie > Pax > Alfie,16.5381,16.5381,0.1338,15.9502,0.454,0.0,0.652,25.0
+6,Maggie,Tyna,Pax,Moon,Maggie > Tyna > Pax > Moon,16.5474,16.5474,0.0986,15.9812,0.4676,0.0,0.6532,25.0
+7,Maggie,Tyna,Pax,Alfie,Maggie > Tyna > Pax > Alfie,16.5604,16.5604,0.0986,16.0127,0.4491,0.0,0.6864,25.0
+8,Enola,Tyna,Pax,Moon,Enola > Tyna > Pax > Moon,16.5674,16.5674,0.1338,15.966,0.4676,0.0,0.6363,25.0
+9,Enola,Tyna,Pax,Alfie,Enola > Tyna > Pax > Alfie,16.5805,16.5805,0.1338,15.9975,0.4491,0.0,0.6687,25.0
+10,Sunny,Alfie,Pax,Moon,Sunny > Alfie > Pax > Moon,16.5853,16.5853,0.1076,16.0055,0.4722,0.0,0.5872,25.0

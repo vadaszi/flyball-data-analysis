@@ -1,0 +1,4 @@
+model,ring_days,venue_days,r2,adj_r2,loeo_r2
+season only,28,22,0.2014,0.1707,-0.556
+weather only,28,22,0.6129,0.5456,0.1218
+weather + season,28,22,0.7682,0.7155,0.569

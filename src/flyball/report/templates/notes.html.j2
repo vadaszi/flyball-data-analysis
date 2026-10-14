@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>{{ meta.title }} – előadói jegyzet</title>
+<style>
+@font-face { font-family: "Source Sans 3"; font-weight: 400; src: url("{{ static }}/fonts/SourceSans3-Regular.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 700; src: url("{{ static }}/fonts/SourceSans3-Bold.ttf"); }
+@page { size: A4; margin: 18mm 18mm 16mm; }
+body { font-family: "Source Sans 3", "DejaVu Sans", sans-serif; font-size: 11.5pt; line-height: 1.4; color: #0b0b0b; }
+h1 { font-size: 20pt; margin: 0 0 4pt; }
+.sub { color: #52514e; margin: 0 0 16pt; }
+.note { break-inside: avoid; border-top: 1px solid #e1e0d9; padding: 8pt 0 6pt; }
+.no { color: #6250d6; font-weight: 700; }
+.time { color: #898781; float: right; }
+h2 { font-size: 12.5pt; margin: 2pt 0 4pt; }
+p { margin: 0 0 4pt; white-space: pre-line; color: #333; }
+.appendix-start { break-before: page; }
+</style>
+</head>
+<body>
+<h1>{{ meta.short_title }} – előadói jegyzet</h1>
+<p class="sub">Diánkénti jegyzetek és időzítés a 10–12 perces előadáshoz; a függelék diái kérdések esetére.</p>
+{% set ns = namespace(app=false) %}
+{% for s in slides %}
+  {% if s.part == "appendix" and not ns.app %}{% set ns.app = true %}<div class="appendix-start"></div><h1>Függelék</h1>{% endif %}
+  {% if s.notes or s.part == "main" %}
+  <div class="note">
+    <span class="no">{{ s.no }}. dia</span>{% if s.time %}<span class="time">{{ s.time }}</span>{% endif %}
+    <h2>{{ s.title }}</h2>
+    {% if s.notes %}<p>{{ s.notes|trim }}</p>{% endif %}
+  </div>
+  {% endif %}
+{% endfor %}
+</body>
+</html>
